@@ -1,0 +1,16 @@
+.industrial-texture {
+  background-image:
+    linear-gradient(to right, rgba(220, 227, 230, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 227, 230, 0.1) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at 55% 48%, rgba(253, 254, 253, 0.9), transparent 74%);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
