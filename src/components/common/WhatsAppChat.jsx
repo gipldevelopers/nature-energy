@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MessageCircle, X, Send } from 'lucide-react';
 import { contactInfo } from '../../data/siteData';
 import { chatData } from '../../constants/siteConstants';
 
 export function WhatsAppChat() {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+
+    const isVisible = location.pathname === '/' || location.pathname === '/contact';
+
+    if (!isVisible) return null;
 
     const handleWhatsAppClick = (message = '') => {
         const encodedMsg = encodeURIComponent(message || "Hi, I'm interested in Nature Organic Energy biomass burners.");
