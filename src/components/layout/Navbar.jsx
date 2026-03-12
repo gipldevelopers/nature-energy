@@ -82,20 +82,20 @@ export function Navbar() {
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
-                                            className="absolute left-0 top-[calc(100%-10px)] w-[280px] rounded-2xl border border-[#DCE3E6] bg-white p-3 shadow-2xl"
+                                            className="absolute left-[-20px] top-[calc(100%-10px)] min-w-[320px] w-max rounded-2xl border border-[#DCE3E6] bg-white p-3 shadow-2xl"
                                         >
                                             <div className="grid gap-1">
                                                 {hasDropdown.map((subItem) => (
                                                     <Link
                                                         key={subItem.slug}
                                                         to={`${item.path}/${subItem.slug}`}
-                                                        className="group flex flex-col rounded-xl p-3 transition hover:bg-[#F2F6F7]"
+                                                        className="group flex flex-col rounded-xl px-4 py-3 transition hover:bg-[#F2F6F7]"
                                                     >
-                                                        <span className="text-sm font-bold text-[#354653] group-hover:text-[#078DA4]">
+                                                        <span className="whitespace-nowrap text-sm font-bold text-[#354653] group-hover:text-[#078DA4]">
                                                             {subItem.name}
                                                         </span>
                                                         {subItem.role && (
-                                                            <span className="text-[10px] text-[#5B707E] uppercase tracking-wide">
+                                                            <span className="mt-0.5 text-[10px] text-[#5B707E] uppercase tracking-wide">
                                                                 {subItem.role}
                                                             </span>
                                                         )}
