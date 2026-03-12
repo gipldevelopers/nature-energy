@@ -99,7 +99,7 @@ export function ProductShowcase() {
                                 <SafeImage
                                     src={current.image}
                                     alt={current.name}
-                                    className="relative z-10 h-64 w-full object-contain p-6 md:h-full"
+                                    className="relative z-10 h-64 w-full object-cover md:h-full"
                                 />
 
                                 {/* Spec badges floating at bottom */}

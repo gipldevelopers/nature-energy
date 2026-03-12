@@ -2,15 +2,15 @@ import React from 'react';
 import { Reveal } from '../common/Reveal';
 import { MagneticLink } from '../common/MagneticLink';
 import { SafeImage } from '../common/SafeImage';
-import ctaImage from '../../assets/images/cta_consultation.png';
+import ctaConsultation from '../../assets/images/cta_consultation.png';
 
 export function CTASection({
-    label = "Ready to Transform Your Business?",
-    title = "Take the Next Step Toward Sustainable Growth",
-    text = "Discover how you can boost efficiency, cut costs, and accelerate your business success with our biomass energy solutions.",
-    image = ctaImage,
-    primaryBtn = { text: "Get Started Now", to: "/contact" },
-    secondaryBtn = { text: "Book a Free Demo", to: "/contact" }
+    label = "Call to Action Section",
+    title = "Reduce Your Fuel Cost Today",
+    text = "Switch to Biomass Pellet Burner & Save Up to 50% Minimum.",
+    image = ctaConsultation,
+    primaryBtn = { text: "Contact Our Expert Team Now", to: "tel:+910000000000" },
+    secondaryBtn = { text: "Request Free Consultation", to: "/contact" }
 }) {
     return (
         <section className="mx-auto my-12 w-[min(1280px,94vw)]">
