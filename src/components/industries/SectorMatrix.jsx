@@ -20,7 +20,7 @@ export function SectorMatrix() {
                         <div className="absolute inset-x-0 bottom-0 p-5">
                             <h3 className="text-xl font-bold text-white group-hover:text-[#66D9E8] transition-colors">{ind.name}</h3>
                             <p className="mt-1 line-clamp-2 text-xs text-white/80">{ind.intro}</p>
-                            <Link to={`/industries/${ind.slug}`} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#66D9E8] opacity-0 transition-opacity group-hover:opacity-100">
+                            <Link to={`/industries/${ind.slug}`} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#66D9E8] lg:opacity-0 transition-opacity lg:group-hover:opacity-100">
                                 View Thermal Profiles <ArrowRight size={14} />
                             </Link>
                         </div>
