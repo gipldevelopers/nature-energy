@@ -161,11 +161,10 @@ export function Navbar() {
                                             {hasDropdown && (
                                                 <button
                                                     onClick={() => setMobileExpanded(mobileExpanded === item.path ? null : item.path)}
-                                                    className={`flex h-12 w-12 items-center justify-center rounded-xl border transition-all ${
-                                                        mobileExpanded === item.path 
-                                                        ? 'border-[#078DA4] bg-[#078DA4] text-white' 
-                                                        : 'border-[#DCE3E6] text-[#5B707E]'
-                                                    }`}
+                                                    className={`flex h-12 w-12 items-center justify-center rounded-xl border transition-all ${mobileExpanded === item.path
+                                                            ? 'border-[#078DA4] bg-[#078DA4] text-white'
+                                                            : 'border-[#DCE3E6] text-[#5B707E]'
+                                                        }`}
                                                 >
                                                     <ChevronDown size={18} className={`transition-transform duration-300 ${mobileExpanded === item.path ? 'rotate-180' : ''}`} />
                                                 </button>
@@ -174,7 +173,7 @@ export function Navbar() {
 
                                         <AnimatePresence>
                                             {hasDropdown && mobileExpanded === item.path && (
-                                                <Motion.div 
+                                                <Motion.div
                                                     initial={{ height: 0, opacity: 0 }}
                                                     animate={{ height: 'auto', opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}

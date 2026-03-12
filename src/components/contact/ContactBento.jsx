@@ -19,8 +19,12 @@ export function ContactBento() {
                     <h3 className="mt-4 text-lg font-bold text-[#354653]">{dept.title}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-[#5B707E]">{dept.desc}</p>
                     <div className="mt-4 pt-4 border-t border-[#DCE3E6]">
-                        <p className="text-sm font-bold text-[#066F82]">{dept.contact}</p>
-                        <p className="mt-1 text-xs text-[#5B707E]">{dept.link}</p>
+                        <a href={`tel:${dept.contact.replace(/\s+/g, '')}`} className="text-sm font-bold text-[#066F82] hover:underline block">{dept.contact}</a>
+                        {dept.link.includes('@') ? (
+                            <a href={`mailto:${dept.link}`} className="mt-1 text-xs text-[#5B707E] hover:underline block">{dept.link}</a>
+                        ) : (
+                            <p className="mt-1 text-xs text-[#5B707E]">{dept.link}</p>
+                        )}
                     </div>
                 </Reveal>
             ))}

@@ -37,20 +37,20 @@ export function Footer() {
                     </Link>
 
                     <p className="mt-4 max-w-md text-sm leading-relaxed text-[#078DA4] font-semibold">
-                        Switch to Smart Biomass Energy.<br/>
-                        Reduce Fuel Cost.<br/>
-                        Increase Profitability.<br/>
+                        Switch to Smart Biomass Energy.<br />
+                        Reduce Fuel Cost.<br />
+                        Increase Profitability.<br />
                     </p>
                     <p className="mt-2 max-w-md text-sm leading-relaxed text-[#354653] font-bold">
                         Choose Nature Organic Energy.
                     </p>
                     <div className="mt-5 grid gap-2 text-sm text-[#5B707E]">
-                        <p className="inline-flex items-center gap-2">
+                        <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
                             <Phone size={15} /> +91 {contactInfo.mobile}
-                        </p>
-                        <p className="inline-flex items-center gap-2">
+                        </a>
+                        <a href={`mailto:${contactInfo.email}`} className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
                             <Mail size={15} /> {contactInfo.email}
-                        </p>
+                        </a>
                         <p className="inline-flex items-center gap-2">
                             <MapPin size={15} /> {contactInfo.address}
                         </p>

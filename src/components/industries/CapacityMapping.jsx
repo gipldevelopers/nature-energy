@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../common/SectionTitle';
 import { Reveal } from '../common/Reveal';
@@ -7,6 +7,24 @@ import { cardBase } from '../../constants/siteConstants';
 const Motion = motion;
 
 export function CapacityMapping() {
+    const [status, setStatus] = useState('idle');
+    const [formData, setFormData] = useState({ sector: '', consumption: '' });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setStatus('sending');
+        setTimeout(() => {
+            setStatus('success');
+            setFormData({ sector: '', consumption: '' });
+            setTimeout(() => setStatus('idle'), 5000);
+        }, 1200);
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] rounded-[24px] border border-[#DCE3E6] bg-[#FDFEFD] p-6 lg:p-10">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -42,13 +60,40 @@ export function CapacityMapping() {
                 <Reveal className={`${cardBase} p-8 bg-[#F2F6F7]`}>
                     <h3 className="text-xl font-bold text-[#354653]">Burner Sizing Consultation</h3>
                     <p className="mt-3 text-sm text-[#5B707E]">Don't know your required Kcal output? Provide our engineers with your diesel consumption or boiler ton capacity, and we will calculate the rest.</p>
-                    <form className="mt-6 flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
-                        <input type="text" placeholder="Your Industry Sector" className="w-full rounded-xl border border-[#DCE3E6] px-4 py-3 text-sm focus:border-[#078DA4] focus:outline-none" />
-                        <input type="text" placeholder="Current Diesel/Gas Use (e.g. 50L/hr)" className="w-full rounded-xl border border-[#DCE3E6] px-4 py-3 text-sm focus:border-[#078DA4] focus:outline-none" />
-                        <button className="rounded-xl bg-[#066F82] px-4 py-3 text-sm font-bold text-white transition hover:bg-[#354653]">
-                            Request Calculation
-                        </button>
-                    </form>
+                    
+                    {status === 'success' ? (
+                        <div className="mt-6 flex flex-col items-center justify-center py-4 text-center border-2 border-dashed border-[#066F82]/20 rounded-2xl bg-white/50">
+                            <h4 className="text-lg font-bold text-[#066F82]">Request Received!</h4>
+                            <p className="mt-1 text-xs text-[#5B707E]">Our engineers will contact you soon.</p>
+                        </div>
+                    ) : (
+                        <form className="mt-6 flex flex-col gap-3" onSubmit={handleSubmit}>
+                            <input 
+                                required
+                                name="sector"
+                                value={formData.sector}
+                                onChange={handleChange}
+                                type="text" 
+                                placeholder="Your Industry Sector" 
+                                className="w-full rounded-xl border border-[#DCE3E6] px-4 py-3 text-sm focus:border-[#078DA4] focus:outline-none" 
+                            />
+                            <input 
+                                required
+                                name="consumption"
+                                value={formData.consumption}
+                                onChange={handleChange}
+                                type="text" 
+                                placeholder="Current Diesel/Gas Use (e.g. 50L/hr)" 
+                                className="w-full rounded-xl border border-[#DCE3E6] px-4 py-3 text-sm focus:border-[#078DA4] focus:outline-none" 
+                            />
+                            <button 
+                                disabled={status === 'sending'}
+                                className="rounded-xl bg-[#066F82] px-4 py-3 text-sm font-bold text-white transition hover:bg-[#354653] disabled:opacity-70"
+                            >
+                                {status === 'sending' ? 'Sending...' : 'Request Calculation'}
+                            </button>
+                        </form>
+                    )}
                 </Reveal>
             </div>
         </section>

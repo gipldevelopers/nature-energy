@@ -23,6 +23,8 @@ export function MagneticLink({ to, children, variant = 'primary', className = ''
         setOffset({ x: x * 0.12, y: y * 0.18 });
     };
 
+    const isExternal = typeof to === 'string' && (to.startsWith('http') || to.startsWith('tel:') || to.startsWith('mailto:'));
+
     return (
         <Motion.div
             ref={ref}
@@ -32,12 +34,21 @@ export function MagneticLink({ to, children, variant = 'primary', className = ''
             onMouseLeave={() => setOffset({ x: 0, y: 0 })}
             className="inline-flex"
         >
-            <Link
-                to={to}
-                className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition hover:scale-[1.02] ${base} ${className}`}
-            >
-                {children}
-            </Link>
+            {isExternal ? (
+                <a
+                    href={to}
+                    className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition hover:scale-[1.02] ${base} ${className}`}
+                >
+                    {children}
+                </a>
+            ) : (
+                <Link
+                    to={to}
+                    className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition hover:scale-[1.02] ${base} ${className}`}
+                >
+                    {children}
+                </Link>
+            )}
         </Motion.div>
     );
 }
