@@ -1,25 +1,54 @@
-import heroBg from '../assets/images/hero_bg.png';
-import burnerMain from '../assets/images/burner_main.png';
-import boilerRoom from '../assets/images/boiler_room.png';
-import machine1 from '../assets/images/machine_1.png';
-import pellets from '../assets/images/pellets.png';
+// ── Core product / hero images (your original high-quality PNGs) ──
+import heroBg        from '../assets/images/hero_bg.png';
+import burnerMain    from '../assets/images/burner_main.png';
+import boilerRoom    from '../assets/images/boiler_room.png';
+import machine1      from '../assets/images/machine_1.png';
+import pellets       from '../assets/images/pellets.png';
+import ctaConsultation from '../assets/images/cta_consultation.png';
+
+// ── All original images from the public folder ──
+import heroBgOrig      from '../assets/images/hero_bg.jpg';        // Hero background original
+import burnerMainOrig  from '../assets/images/burner_main.jpg';    // Burner unit close-up
+import boilerRoomOrig  from '../assets/images/boiler_room.jpg';    // Boiler room interior
+import machine1Orig    from '../assets/images/machine_1.jpg';      // Machine fabrication bay
+import ctaOrig         from '../assets/images/cta_consultation.jpg'; // Consultation scene
+import riceHusk        from '../assets/images/rice_husk.jpg';      // Biomass / rice husk pellets
+import factoryHallImg  from '../assets/images/factory_hall.jpg';   // Factory hall wide view
+import furnaceLineImg  from '../assets/images/furnace_line.jpg';   // Furnace line / industrial heating
+import installSiteImg  from '../assets/images/install_site.jpg';   // Installation / commissioning site
+import textileImg      from '../assets/images/textile.jpg';        // Textile manufacturing line
+import controlRoomImg  from '../assets/images/control_room.jpg';   // Control room / automation panel
+import foodLineImg     from '../assets/images/food_line.jpg';      // Food processing heating line
+import imagesImg       from '../assets/images/images.jpg';         // Additional industrial view
+import pelletStorage   from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
 
 export const imageSet = {
+  // Core (PNG – used in hero & product cards)
   heroBg,
   burnerMain,
   boilerRoom,
   machine1,
   pellets,
-  factoryHall: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df0d?auto=format&fit=crop&w=1800&q=80',
-  furnaceLine: 'https://images.unsplash.com/photo-1565715101849-67a08f0a7eea?auto=format&fit=crop&w=1800&q=80',
-  automation: 'https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?auto=format&fit=crop&w=1800&q=80',
-  steelPlant: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1800&q=80',
-  installSite: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80',
-  boilerPlant: '/photo-1504328345606-18bbc8c9d7d1.jpg',
-  textile: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1800&q=80',
-  foodLine: 'https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=1800&q=80',
-  controlRoom: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1800&q=80',
-  machine2: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=1800&q=80',
+  ctaConsultation,
+
+  // Extended – every slot gets its own distinct original image
+  factoryHall:  factoryHallImg,    // Gallery / About – wide factory view
+  furnaceLine:  furnaceLineImg,    // Technology / Projects – furnace line
+  automation:   controlRoomImg,    // Blog / Technology – automation panel
+  steelPlant:   heroBgOrig,       // About – steel / industrial plant
+  installSite:  installSiteImg,   // Industries / Projects – install site
+  boilerPlant:  boilerRoomOrig,   // Industries – boiler plant interior
+  textile:      textileImg,       // Industries – textile manufacturing
+  foodLine:     foodLineImg,      // Industries / Products – food processing
+  controlRoom:  controlRoomImg,   // Industries / Blog – control room
+
+  // Additional unique images available for gallery & sections
+  riceHusk:     riceHusk,         // Fuel section – biomass rice husk
+  pelletStorage: pelletStorage,   // Gallery – pellet/pallet storage
+  industrialView: imagesImg,      // Gallery – additional industrial
+  burnerOrig:   burnerMainOrig,   // Gallery – original burner close-up
+  machine1Orig: machine1Orig,     // Gallery – original machine view
+  ctaOrig:      ctaOrig,          // CTA section alternate
 };
 
 export const navItems = [
@@ -34,6 +63,18 @@ export const navItems = [
   { label: 'FAQ', path: '/faq' },
   { label: 'Contact', path: '/contact' },
 ];
+
+export const contactInfo = {
+  address: '01, Bhagwati Nagar OPP Kathwada GIDC & Indore Highway, Kathwada, Ahmedabad 382430',
+  mobile: '9904888070',
+  email: 'natureenergy-sales@gmail.com',
+  whatsapp: '9904888070',
+  mapEmbedUrl: 'https://maps.google.com/maps?q=01,%20Bhagwati%20Nagar%20OPP%20Kathwada%20GIDC%20%26%20Indore%20Highway,%20Kathwada,%20Ahmedabad%20382430&t=&z=13&ie=UTF8&iwloc=&output=embed',
+  referenceWebsites: [
+    { name: 'Burner India', url: '#' },
+    { name: 'Green Fire', url: '#' }
+  ]
+};
 
 export const trustStats = [
   { label: 'Industrial Installations', value: '280+' },
@@ -75,9 +116,28 @@ export const products = [
     processFlow: [
       'Bulk pellet storage and level monitoring',
       'Metered screw feeding to combustion chamber',
-      'Intelligent air-fuel ratio control',
+      'Dual-stage air injection for gasification',
+      'Intelligent air-fuel ratio PID control',
       'Stable heat transfer to process equipment',
     ],
+    whyChoose: [
+      { title: 'In-House Fabricated', desc: 'Every burner is built at our Ahmedabad facility under controlled quality conditions. No outsourced combustion chambers.' },
+      { title: 'Anti-Slagging Design', desc: 'Cast refractory geometry prevents ash fusion at high temperatures, reducing clinker buildup and unplanned shutdowns.' },
+      { title: 'Remote Monitoring Ready', desc: 'Optional IoT module allows remote temperature visibility, alarm notifications, and fuel cycle tracking via mobile.' },
+    ],
+    techDetails: [
+      { label: 'Combustion Type', value: 'Gasification + combustion hybrid (dual-stage)' },
+      { label: 'Flame Stability', value: 'Active PID loop with thermocouple feedback' },
+      { label: 'Fuel Hopper Capacity', value: '200 – 800 kg (model dependent)' },
+      { label: 'Ash Removal', value: 'Integrated pull-out tray with weekly cleaning cycle' },
+      { label: 'Control Panel', value: 'IP54-rated powder-coated enclosure with HMI' },
+    ],
+    faqs: [
+      { q: 'What pellet sizes can this burner handle?', a: '6mm and 8mm diameter pellets are standard. Custom feed screws can accommodate 10mm pellets.' },
+      { q: 'How long does installation take?', a: 'Typical site installation takes 3–5 working days including electrical, mechanical, and initial test firing.' },
+      { q: 'Is after-sales support available pan-India?', a: 'Yes. We have service engineers and spare part depots across Gujarat, Maharashtra, Tamil Nadu, and Punjab.' },
+    ],
+    relatedSlugs: ['boiler-pellet-burner', 'custom-biomass-heating-systems'],
   },
   {
     slug: 'boiler-pellet-burner',
@@ -104,11 +164,30 @@ export const products = [
     ],
     applications: ['Food steam lines', 'Textile utility boilers', 'Chemical utility sections', 'Dairy process steam'],
     processFlow: [
-      'Fuel receives from hopper to feeder',
-      'Controlled ignition starts combustion',
-      'Heat release tuned to boiler load',
-      'Closed-loop temperature stabilization',
+      'Pellet transferred from hopper to feed screw',
+      'Controlled ignition sequence initiates combustion',
+      'Flame supervison confirmed before full load',
+      'Heat release tuned to boiler steam demand',
+      'Closed-loop temperature stabilization with feedback',
     ],
+    whyChoose: [
+      { title: 'Drop-in Retrofit', desc: 'Designed to physically bolt onto the existing burner mounting of most Indian-made boilers. No boiler modification required in the majority of installations.' },
+      { title: 'Supervised Safety', desc: 'Integrated flame failure detection and automatic shutdown logic ensures safe operation even during power fluctuations or fuel interruptions.' },
+      { title: 'Low-Soot Operation', desc: 'Complete combustion chemistry eliminates the carbon soot buildup that degrades boiler tube efficiency in conventional oil-fired systems.' },
+    ],
+    techDetails: [
+      { label: 'Flame Scanner', value: 'UV / IR detection with auto-shutdown on failure' },
+      { label: 'Fuel Feed System', value: 'Single-screw metered feeder with VFD control' },
+      { label: 'Air Staging', value: 'Primary and secondary air zones for complete burn' },
+      { label: 'HMI Display', value: '7-inch color touchscreen with alarm log' },
+      { label: 'Communication', value: 'Modbus RTU for integration with plant SCADA' },
+    ],
+    faqs: [
+      { q: 'Can this replace a diesel-fired burner on an existing boiler?', a: 'Yes. Most installations are direct retrofits to the existing burner port on the boiler front plate, requiring no structural modification.' },
+      { q: 'What are the maintenance intervals?', a: 'Ash tray cleaning weekly, combustion chamber inspection monthly, and full service annually. Service typically takes 4–6 hours.' },
+      { q: 'What is the minimum order quantity and delivery time?', a: 'Standard models can be delivered in 3–4 weeks. Custom capacity models require 6–8 weeks from order confirmation.' },
+    ],
+    relatedSlugs: ['industrial-pellet-burner', 'custom-biomass-heating-systems'],
   },
   {
     slug: 'bakery-oven-pellet-burner',
@@ -135,11 +214,30 @@ export const products = [
     ],
     applications: ['Rotary baking ovens', 'Tunnel ovens', 'Snack plant heating', 'Confectionery lines'],
     processFlow: [
-      'Pellet feed initialization',
-      'Controlled combustion starts',
-      'Oven zone temperature balancing',
-      'Continuous operation with auto adjustment',
+      'Pellet feed initialization from hopper',
+      'Controlled ignition sequence begins',
+      'Oven zone temperature rises along set curve',
+      'Stable thermostat-controlled batch operation',
+      'Auto-shutdown or idle mode between batches',
     ],
+    whyChoose: [
+      { title: 'Food-Grade Compliance', desc: 'Combustion gases are fully isolated from the baking chamber by design, maintaining FSSAI and hygiene compliance standards.' },
+      { title: 'Batch Cost Reduction', desc: 'Customers report 35–45% reduction in heating cost per batch compared to LPG, directly improving product line profitability.' },
+      { title: 'Simple Operator Training', desc: 'Intuitive HMI with pre-set baking profiles means line operators require less than 2 hours of training to run the system independently.' },
+    ],
+    techDetails: [
+      { label: 'Temperature Stability', value: '±3°C variance on thermocouple feedback in stable operation' },
+      { label: 'Combustion Chamber', value: 'Insulated refractory with low external surface temperature' },
+      { label: 'Heat Transfer Mode', value: 'Indirect hot air or direct radiation (model dependent)' },
+      { label: 'Ignition', value: 'Electric auto-ignition with retry logic' },
+      { label: 'Safety', value: 'High-temperature cutoff, draft failure alarm, flame supervision' },
+    ],
+    faqs: [
+      { q: 'Can it replace our existing LPG burner on the tunnel oven?', a: 'Yes, in most cases. We do a site audit first to verify flange dimensions and heat load requirements before recommending a model.' },
+      { q: 'Does this affect baking quality or product taste?', a: 'No. The combustion gases are separated from the food zone. Our customers report identical or improved product consistency after switching.' },
+      { q: 'What is the payback period for a mid-size bakery?', a: 'Most mid-size bakeries with 8–12 hour daily run cycles see full payback within 10–14 months based on current LPG vs pellet pricing.' },
+    ],
+    relatedSlugs: ['industrial-pellet-burner', 'boiler-pellet-burner'],
   },
   {
     slug: 'custom-biomass-heating-systems',
@@ -166,11 +264,30 @@ export const products = [
     ],
     applications: ['Dryer parks', 'Agro processing lines', 'Chemical utility blocks', 'Special process heating'],
     processFlow: [
-      'Thermal survey and engineering baseline',
-      'System design and fabrication',
-      'Site integration and commissioning',
-      'Performance tuning and handover',
+      'On-site thermal survey and data collection',
+      'Engineering design and specification review',
+      'Fabrication and factory acceptance test',
+      'Site integration, piping, and electrical commissioning',
+      'Performance tuning, training, and formal handover',
     ],
+    whyChoose: [
+      { title: 'Full Thermal Audit', desc: 'We map every heat source, loss point, and demand zone before designing. This ensures the system is sized correctly and not over/under specified.' },
+      { title: 'No Generic Solutions', desc: 'Every custom project is unique. We do not adapt a standard product — we engineer from scratch based on your process reality.' },
+      { title: 'Long-Term Partnership', desc: 'Custom clients get priority support, dedicated service engineers, and annual performance review meetings as part of the project agreement.' },
+    ],
+    techDetails: [
+      { label: 'Combustion Sizing Method', value: 'Thermal load mapping + safety margin calculation' },
+      { label: 'Control Strategy', value: 'Multi-zone PLC with independent loop control per zone' },
+      { label: 'Safety Architecture', value: 'Emergency stop, high-temp cutoff, fuel feed interlock, flame supervision' },
+      { label: 'Communication Protocol', value: 'Modbus TCP/IP or Ethernet/IP for plant DCS integration' },
+      { label: 'Structural Design', value: 'Includes structural support frame, walkways, and maintenance access' },
+    ],
+    faqs: [
+      { q: 'What information do you need to start a custom project?', a: 'We need your current fuel type and consumption, process temperature requirements, available utilities, and site layout. A 1-hour initial call is usually sufficient to begin scoping.' },
+      { q: 'How long does a typical custom project take?', a: 'From signed order to commissioning is typically 10–14 weeks for single-zone systems and 14–20 weeks for multi-zone or large-capacity installations.' },
+      { q: 'Do you provide engineering drawings and documentation?', a: 'Yes. Every custom project includes P&ID drawings, electrical panel layout, operation and maintenance manual, and commissioning report.' },
+    ],
+    relatedSlugs: ['industrial-pellet-burner', 'boiler-pellet-burner'],
   },
 ];
 
@@ -276,12 +393,28 @@ export const projects = [
     industry: 'Textile Manufacturing',
     capacity: '1,200,000 kcal/hr',
     savings: '48% monthly fuel savings',
-    challenge:
-      'The client had high furnace oil consumption across dryer lines and needed a reliable alternative without reducing production speed.',
-    solution:
-      'Nature Energy deployed an automatic pellet burner with custom feeder design and adaptive combustion controls tuned for variable drying load.',
-    result:
-      'Fuel spend dropped by nearly half while thermal consistency improved, leading to better line stability and lower maintenance interventions.',
+    completionYear: '2023',
+    projectDuration: '4 Months',
+    challenge: 'The client had high furnace oil consumption across dryer lines and needed a reliable alternative without reducing production speed.',
+    solution: 'Nature Energy deployed an automatic pellet burner with custom feeder design and adaptive combustion controls tuned for variable drying load.',
+    result: 'Fuel spend dropped by nearly half while thermal consistency improved, leading to better line stability and lower maintenance interventions.',
+    keyMetrics: [
+      { label: 'Fuel Saving', value: '48%' },
+      { label: 'ROI Period', value: '11 Months' },
+      { label: 'Old Fuel', value: 'Furnace Oil' },
+      { label: 'Install Time', value: '5 Days' },
+    ],
+    technologies: ['High-Capacity Pellet Burner', 'Automated Bulk Feeder', 'Central Control Panel'],
+    timeline: [
+      { phase: 'Project Audit', detail: 'Detailed mapping of dryer thermal load cycles.' },
+      { phase: 'System Design', detail: 'Engineering the custom burner flange and feeder path.' },
+      { phase: 'Commissioning', detail: 'Installation and performance tuning on active line.' },
+    ],
+    testimonial: {
+      quote: "The switch to Nature Energy was smoother than expected. Our drying quality remains identical, but our fuel bills are down dramatically.",
+      name: "Operations Manager",
+      company: "Surat Textile Unit"
+    }
   },
   {
     slug: 'vadodara-food-boiler',
@@ -291,12 +424,28 @@ export const projects = [
     industry: 'Food Processing',
     capacity: '900,000 kcal/hr',
     savings: '44% monthly fuel savings',
-    challenge:
-      'Steam utility costs were increasing due to diesel usage and impacting operating margin across production shifts.',
-    solution:
-      'A boiler-focused pellet burner package was integrated with existing control systems and optimized for steam load demand.',
-    result:
-      'The plant stabilized utility expenses and improved steam generation reliability with lower monthly fuel outflow.',
+    completionYear: '2023',
+    projectDuration: '3 Months',
+    challenge: 'Steam utility costs were increasing due to diesel usage and impacting operating margin across production shifts.',
+    solution: 'A boiler-focused pellet burner package was integrated with existing control systems and optimized for steam load demand.',
+    result: 'The plant stabilized utility expenses and improved steam generation reliability with lower monthly fuel outflow.',
+    keyMetrics: [
+      { label: 'Fuel Saving', value: '44%' },
+      { label: 'ROI Period', value: '14 Months' },
+      { label: 'Old Fuel', value: 'Diesel' },
+      { label: 'Steam Stability', value: '±0.2 bar' },
+    ],
+    technologies: ['Boiler Pellet Burner', 'Smart PID Steam Control', 'UV Flame Supervision'],
+    timeline: [
+      { phase: 'Site Survey', detail: 'Verification of boiler burner mounting and flue path.' },
+      { phase: 'Retrofit', detail: 'Direct installation on the original burner port.' },
+      { phase: 'Training', detail: 'Intensive operator training for the shift supervisors.' },
+    ],
+    testimonial: {
+      quote: "Our steam pressure recovery is much faster with this system. The fuel cost predictability is a major plus for our management.",
+      name: "Plant Head",
+      company: "Vadodara Food Processing"
+    }
   },
   {
     slug: 'pune-chemical-utility',
@@ -306,13 +455,29 @@ export const projects = [
     industry: 'Chemical Industry',
     capacity: '1,500,000 kcal/hr',
     savings: '50% monthly fuel savings',
-    challenge:
-      'Utility heating in chemical operations required robust control and dependable high-load output with better cost efficiency.',
-    solution:
-      'A custom biomass heating architecture with smart interlocks, panel integration, and tuned combustion logic was deployed.',
-    result:
-      'The site achieved major fuel savings while maintaining process-grade thermal stability and operational safety standards.',
-  },
+    completionYear: '2024',
+    projectDuration: '6 Months',
+    challenge: 'Utility heating in chemical operations required robust control and dependable high-load output with better cost efficiency.',
+    solution: 'A custom biomass heating architecture with smart interlocks, panel integration, and tuned combustion logic was deployed.',
+    result: 'The site achieved major fuel savings while maintaining process-grade thermal stability and operational safety standards.',
+    keyMetrics: [
+      { label: 'Fuel Saving', value: '50%' },
+      { label: 'ROI Period', value: '9 Months' },
+      { label: 'Old Fuel', value: 'Furnace Oil' },
+      { label: 'System Uptime', value: '99.5%' },
+    ],
+    technologies: ['Custom Combustion Chamber', 'PLC Automation System', 'Hazard Area Integration'],
+    timeline: [
+      { phase: 'Thermal Study', detail: 'Analysis of multiple process heating zones.' },
+      { phase: 'Fabrication', detail: 'Off-site building of the custom heater block.' },
+      { phase: 'Site Integration', detail: 'Piping and electrical interlocks with plant SCADA.' },
+    ],
+    testimonial: {
+      quote: "The safety logic in the Nature Energy system is top-notch. It integrated perfectly with our existing plant emergency protocols.",
+      name: "Technical Director",
+      company: "Pune Chemical Utility"
+    }
+  }
 ];
 
 export const blogs = [
@@ -361,15 +526,20 @@ export const blogs = [
 ];
 
 export const galleryImages = [
-  { id: 1, category: 'manufacturing', title: 'Machine Fabrication Bay', image: imageSet.factoryHall },
-  { id: 2, category: 'installation', title: 'On-Site Burner Installation', image: imageSet.installSite },
-  { id: 3, category: 'application', title: 'Boiler Room Operation', image: imageSet.boilerPlant },
-  { id: 4, category: 'machine', title: 'Industrial Pellet Burner Unit', image: imageSet.machine1 },
-  { id: 5, category: 'application', title: 'Textile Heating Integration', image: imageSet.textile },
-  { id: 6, category: 'technology', title: 'Combustion Control Panel', image: imageSet.controlRoom },
-  { id: 7, category: 'machine', title: 'Burner Assembly View', image: imageSet.burnerMain },
-  { id: 8, category: 'fuel', title: 'Biomass Pellet Handling', image: imageSet.pellets },
-  { id: 9, category: 'application', title: 'Food Process Heating Line', image: imageSet.foodLine },
+  { id: 1,  category: 'manufacturing', title: 'Machine Fabrication Bay',         image: imageSet.factoryHall },
+  { id: 2,  category: 'installation',  title: 'On-Site Burner Installation',      image: imageSet.installSite },
+  { id: 3,  category: 'application',   title: 'Boiler Room Operation',             image: imageSet.boilerPlant },
+  { id: 4,  category: 'machine',       title: 'Industrial Pellet Burner Unit',    image: imageSet.machine1 },
+  { id: 5,  category: 'application',   title: 'Textile Heating Integration',      image: imageSet.textile },
+  { id: 6,  category: 'technology',    title: 'Combustion Control Panel',         image: imageSet.controlRoom },
+  { id: 7,  category: 'machine',       title: 'Burner Assembly Close-Up',         image: imageSet.burnerOrig },
+  { id: 8,  category: 'fuel',          title: 'Biomass Rice Husk Pellets',        image: imageSet.riceHusk },
+  { id: 9,  category: 'application',   title: 'Food Process Heating Line',        image: imageSet.foodLine },
+  { id: 10, category: 'fuel',          title: 'Pellet & Fuel Storage Area',       image: imageSet.pelletStorage },
+  { id: 11, category: 'manufacturing', title: 'Industrial Facility Overview',     image: imageSet.industrialView },
+  { id: 12, category: 'machine',       title: 'Machine Unit – Original View',     image: imageSet.machine1Orig },
+  { id: 13, category: 'technology',    title: 'Furnace & Heating Line',           image: imageSet.furnaceLine },
+  { id: 14, category: 'installation',  title: 'Expert Consultation & Planning',   image: imageSet.ctaOrig },
 ];
 
 export const faqGroups = [
