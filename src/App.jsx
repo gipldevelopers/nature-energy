@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -25,6 +25,7 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import DealerPage from './pages/DealerPage';
 
 import './App.css';
 
@@ -64,6 +65,7 @@ function AppShell() {
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/dealer" element={<DealerPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Motion.div>

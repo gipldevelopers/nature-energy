@@ -12,7 +12,7 @@ export function MissionVision() {
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-[#354653]">Our Mission</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#5B707E]">
-                    To provide highly engineered, sustainable industrial heating technologies that aggressively reduce fuel costs for manufacturers while actively shrinking their environmental footprint and dependency on fossil fuels.
+                    To help industries reduce fuel dependency, lower operating costs, and move towards green energy systems.
                 </p>
             </Reveal>
 
