@@ -13,4 +13,67 @@ body {
   margin: 0;
   background: #FDFEFD;
   color: #5B707E;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
+
+/* ─── GLOBAL MOBILE FIXES ──────────────────────────── */
+
+/* Prevent ANY element from causing horizontal scroll */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Smooth touch scrolling for overflow containers */
+.overflow-x-auto,
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ─── MOBILE: Hero Section ─────────────────────────── */
+@media (max-width: 767px) {
+  /* Hero video fills screen properly */
+  section video {
+    object-fit: cover;
+  }
+
+  /* Hero heading font sizing */
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Stat bars / trust strip — horizontal scroll on mobile */
+  .trust-strip {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ─── TABLET: md breakpoint tweaks ────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+  }
+}
+
+/* ─── COMMISSIONING GALLERY: prevent overflow on mobile ── */
+@media (max-width: 767px) {
+  .commissioning-row {
+    /* Force motion rows to stay in-bounds on mobile */
+    transform: none !important;
+  }
+}
+
+/* ─── TOUCH TARGETS: all buttons min 44px ─────────── */
+@media (max-width: 1024px) {
+  button,
+  a[class*="rounded-full"],
+  a[class*="rounded-xl"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
