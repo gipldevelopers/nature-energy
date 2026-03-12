@@ -82,12 +82,12 @@ export function HeroSection() {
                     </Reveal>
 
                     {/* ── Right: Machine Image Card ── */}
-                    <Motion.div style={{ y: parallaxY }} className="relative hidden xl:block self-center">
-                        <div className={`relative p-5 ${cardBase} border-[#DCE3E6]/40 bg-[#FDFEFD]/18`}>
+                    <Motion.div style={{ y: parallaxY }} className="relative hidden xl:block self-center max-w-[550px] ml-auto">
+                        <div className="relative group">
                             <SafeImage
                                 src={imageSet.machine1}
                                 alt="Industrial biomass pellet burner"
-                                className="mx-auto h-[320px] lg:h-[350px] w-full object-contain"
+                                className="h-[400px] lg:h-[480px] w-full object-cover rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-[#DCE3E6]"
                             />
                             {[
                                 { label: 'Automatic Fuel Feeding', style: 'left-2 top-6' },
