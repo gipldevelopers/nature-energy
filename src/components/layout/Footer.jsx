@@ -22,7 +22,7 @@ export function Footer() {
 
     return (
         <footer className="mt-10 border-t border-[#DCE3E6] bg-[#F2F6F7]">
-            <div className="mx-auto grid w-[min(1280px,94vw)] gap-8 py-10 md:grid-cols-[1.3fr_1fr_1fr]">
+            <div className="mx-auto grid w-[min(1280px,94vw)] gap-8 py-10 sm:grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr]">
                 <div>
                     <Link to="/" className="inline-flex items-center gap-3">
                         <img

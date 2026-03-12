@@ -20,9 +20,9 @@ export default function AboutPage() {
         <main className="pb-12">
             {/* SECTION 1: Page Hero */}
             <PageHero
-                label="About Our Company"
-                title="Engineering the future of sustainable industrial heating"
-                subtitle="A premier manufacturer of advanced biomass pellet burner systems, committed to replacing expensive fossil fuels with highly efficient, automated thermal technology."
+                label="About the company"
+                title="Powering Industries with Smart Biomass Heating Solutions"
+                subtitle="Nature Organic Energy is a trusted manufacturer of industrial pellet burners designed for high performance, durability, and fuel efficiency. Our systems are engineered for industries seeking sustainable and cost-effective heating alternatives. With advanced manufacturing facilities and experienced technical teams, we deliver reliable heating systems across India."
                 image={imageSet.factoryHall}
             />
 

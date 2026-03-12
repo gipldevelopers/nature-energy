@@ -24,13 +24,13 @@ export default function GalleryPage() {
             />
 
             <section className="mx-auto mt-6 w-[min(1280px,94vw)] rounded-[24px] border border-[#DCE3E6] bg-[#FDFEFD] p-6 md:p-9">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-nowrap overflow-x-auto gap-2 pb-2 no-scrollbar">
                     {categories.map((category) => (
                         <button
                             key={category}
                             type="button"
                             onClick={() => setFilter(category)}
-                            className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.08em] ${filter === category
+                            className={`whitespace-nowrap rounded-full border px-4 py-2 text-xs uppercase tracking-[0.08em] flex-shrink-0 ${filter === category
                                     ? 'border-[#078DA4]/40 bg-[#078DA4]/12 text-[#066F82]'
                                     : 'border-[#DCE3E6] text-[#5B707E]'
                                 }`}
