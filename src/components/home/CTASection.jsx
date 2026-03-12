@@ -48,7 +48,7 @@ export function CTASection({
                     </div>
 
                     {/* Image Side */}
-                    <div className="relative h-[280px] lg:h-[420px] lg:flex-1 overflow-hidden">
+                    <div className="relative h-[200px] sm:h-[280px] lg:h-[420px] lg:flex-1 overflow-hidden">
                         <SafeImage
                             src={image}
                             alt="Industrial Consultation"

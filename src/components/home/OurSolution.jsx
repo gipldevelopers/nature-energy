@@ -10,7 +10,7 @@ export function OurSolution() {
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] rounded-[24px] border border-[#DCE3E6] bg-[#FDFEFD] p-6 md:p-9">
             <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
-                <Reveal className={`${cardBase} relative overflow-hidden p-0 min-h-[320px] lg:h-full lg:min-h-0`}>
+                <Reveal className={`${cardBase} relative overflow-hidden p-0 h-[240px] sm:h-[300px] lg:h-full lg:min-h-0`}>
                     <SafeImage src={imageSet.burnerMain} alt="Biomass burner technology" className="absolute inset-0 h-full w-full object-cover" />
                 </Reveal>
                 <Reveal className="flex flex-col justify-center">

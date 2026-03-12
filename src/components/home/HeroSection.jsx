@@ -24,7 +24,7 @@ export function HeroSection() {
 
     return (
         <section ref={ref} className="mx-auto mt-4 w-[min(1280px,94vw)] relative">
-            <div className="relative h-[calc(100svh-104px)] min-h-[500px] max-h-[850px] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
+            <div className="relative h-[calc(100svh-80px)] min-h-[420px] max-h-[850px] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
                 <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster={imageSet.heroBg}>
                     <source src="https://cdn.coverr.co/videos/coverr-industrial-heating-9710/1080p.mp4" type="video/mp4" />
                 </video>
@@ -33,7 +33,7 @@ export function HeroSection() {
                 <div className="industrial-texture absolute inset-0" />
                 <ParticleField />
 
-                <div className="relative z-10 mx-auto grid h-full w-full grid-cols-1 items-center gap-6 px-6 py-4 md:px-10 xl:grid-cols-[1.1fr_0.9fr]">
+                <div className="relative z-10 mx-auto grid h-full w-full grid-cols-1 items-center gap-6 px-4 py-6 md:px-10 xl:grid-cols-[1.1fr_0.9fr]">
 
                     {/* ── Left: Text Content ── */}
                     <Reveal>
@@ -43,12 +43,12 @@ export function HeroSection() {
                         </span>
 
                         {/* H1 */}
-                        <h1 className="mt-3 text-3xl font-bold leading-tight text-[#FDFEFD] md:text-4xl lg:text-5xl">
+                        <h1 className="mt-3 text-xl font-bold leading-tight text-[#FDFEFD] sm:text-2xl md:text-4xl lg:text-5xl">
                             High Efficiency &bull; Low Fuel Cost &bull; Fully Automatic System
                         </h1>
 
                         {/* Description */}
-                        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#FDFEFD]/90 md:text-base">
+                        <p className="mt-3 max-w-2xl text-xs leading-relaxed text-[#FDFEFD]/90 sm:text-sm md:text-base">
                             At <span className="font-semibold text-white">Nature Organic Energy</span>, we design and manufacture advanced{' '}
                             <span className="font-semibold text-white">Biomass Pellet Burners</span>{' '}
                             that reduce fuel costs by up to 40–50% compared to diesel and furnace oil systems.
@@ -71,7 +71,7 @@ export function HeroSection() {
                         </Motion.ul>
 
                         {/* CTAs */}
-                        <div className="mt-6 flex flex-wrap gap-3">
+                        <div className="mt-4 flex flex-wrap gap-2 md:mt-6 md:gap-3">
                             <MagneticLink to="/contact#contact_form" variant="primary">
                                 Get Free Quotation Today <ArrowRight size={15} />
                             </MagneticLink>

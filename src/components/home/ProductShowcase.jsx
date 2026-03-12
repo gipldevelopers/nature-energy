@@ -99,14 +99,14 @@ export function ProductShowcase() {
                                 <SafeImage
                                     src={current.image}
                                     alt={current.name}
-                                    className="relative z-10 h-64 w-full object-cover md:h-full"
+                                    className="relative z-10 h-44 w-full object-cover sm:h-64 md:h-full"
                                 />
 
                                 {/* Spec badges floating at bottom */}
                                 {current.specs.slice(0, 2).map(([key, val]) => (
                                     <div
                                         key={key}
-                                        className="absolute bottom-4 left-4 z-20 rounded-xl border border-white/15 bg-white/10 px-3 py-2 backdrop-blur-md first-of-type:left-4 last-of-type:left-auto last-of-type:right-4"
+                                        className="absolute bottom-4 left-4 z-20 rounded-xl border border-white/15 bg-white/10 px-2 py-1.5 backdrop-blur-md first-of-type:left-4 last-of-type:left-auto last-of-type:right-4 max-w-[45%]"
                                     >
                                         <p className="text-[9px] font-bold uppercase tracking-widest text-white/50">{key}</p>
                                         <p className="mt-0.5 text-xs font-semibold text-white">{val}</p>
