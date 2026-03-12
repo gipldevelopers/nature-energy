@@ -22,7 +22,7 @@ export default function ProductsPage() {
             <PageHero
                 label="Industrial Burners"
                 title="Premium biomass pellet burner systems for diverse thermal loads"
-                subtitle="Engineered for reliability. Nature Energy burners effortlessly replace diesel and gas systems to cut costs by 50% without compromising on heat output."
+                subtitle="Engineered for reliability. Nature Organic Energy burners effortlessly replace diesel and gas systems to cut costs by 50% without compromising on heat output."
                 image={imageSet.burnerMain}
             />
 
@@ -39,7 +39,7 @@ export default function ProductsPage() {
             <CTASection
                 label="Industrial Burners"
                 title="Ready to specify a burner?"
-                text="Our engineering team is ready to analyze your current fuel consumption and calculate the exact payback period for a new Nature Energy pellet burner."
+                text="Our engineering team is ready to analyze your current fuel consumption and calculate the exact payback period for a new Nature Organic Energy pellet burner."
                 image={imageSet.burnerMain}
                 primaryBtn={{ text: "Get A Custom Quote", to: "/contact" }}
                 secondaryBtn={{ text: "View Technical Specs", to: "/products/industrial-pellet-burner" }}

@@ -27,12 +27,12 @@ export function Footer() {
                     <Link to="/" className="inline-flex items-center gap-3">
                         <img
                             src="/nature organic energy.svg"
-                            alt="Nature Energy Logo"
+                            alt="Nature Organic Energy Logo"
                             className="h-14 w-14 object-contain"
                         />
                         <div className="flex flex-col">
-                            <span className="text-xl font-bold leading-tight text-[#354653]">Nature Energy</span>
-                            <span className="text-xs uppercase tracking-widest text-[#078DA4]">Organic</span>
+                            <span className="text-xl font-bold leading-tight text-[#354653]">Nature Organic</span>
+                            <span className="text-xs uppercase tracking-widest text-[#078DA4]">Energy</span>
                         </div>
                     </Link>
 
@@ -92,7 +92,7 @@ export function Footer() {
                 </div>
             </div>
             <div className="border-t border-[#DCE3E6] py-4 text-center text-xs text-[#9EABAE]">
-                © {new Date().getFullYear()} Nature Energy. All rights reserved.
+                © {new Date().getFullYear()} Nature Organic Energy. All rights reserved.
             </div>
         </footer>
     );

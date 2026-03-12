@@ -23,8 +23,8 @@ export function HeroSection() {
     const parallaxY = useTransform(scrollYProgress, [0, 1], [0, 90]);
 
     return (
-        <section ref={ref} className="mx-auto my-4 w-[min(1280px,94vw)] relative">
-            <div className="relative h-[calc(100svh-112px)] min-h-[420px] max-h-[850px] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
+        <section ref={ref} className="mx-auto mt-0 mb-6 w-[min(1280px,94vw)] relative">
+            <div className="relative h-[calc(100svh-80px)] md:h-[calc(100svh-100px)] min-h-[420px] max-h-[850px] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
                 <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster={imageSet.heroBg}>
                     <source src="https://cdn.coverr.co/videos/coverr-industrial-heating-9710/1080p.mp4" type="video/mp4" />
                 </video>

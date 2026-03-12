@@ -21,7 +21,7 @@ export function BeforeAfterComparison() {
             <div className="mb-6">
                 <SectionTitle
                     label="Comparison"
-                    title="Traditional vs. Nature Energy"
+                    title="Traditional vs. Nature Organic Energy"
                 />
             </div>
 
@@ -51,10 +51,10 @@ export function BeforeAfterComparison() {
                     </div>
                 </Reveal>
 
-                {/* Nature Energy System Card */}
+                {/* Nature Organic Energy System Card */}
                 <Reveal className="rounded-[20px] border border-[#078DA4]/30 bg-white p-5 md:p-6 shadow-lg shadow-[#066F82]/5">
                     <div className="mb-4 flex items-center justify-between">
-                        <h3 className="text-lg font-bold text-[#066F82]">Nature Energy</h3>
+                        <h3 className="text-lg font-bold text-[#066F82]">Nature Organic Energy</h3>
                         <span className="rounded-full bg-[#078DA4] px-2 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">Optimized</span>
                     </div>
 

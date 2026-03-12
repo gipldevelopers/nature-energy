@@ -13,7 +13,7 @@ export function NationalMap() {
                     title="A Pan-India Network of Biomass Power"
                 />
                 <p className="mt-4 text-sm leading-relaxed text-[#5B707E]">
-                    From the textile hubs of Tamil Nadu to the chemical belts of Gujarat, Nature Energy burners are powering India's industrial backbone. We have successfully commissioned projects in over 12 states.
+                    From the textile hubs of Tamil Nadu to the chemical belts of Gujarat, Nature Organic Energy burners are powering India's industrial backbone. We have successfully commissioned projects in over 12 states.
                 </p>
                 <div className="mt-8 space-y-4">
                     {['Gujarat Hub (50+ Installs)', 'Maharashtra Industrial Belt', 'Tamil Nadu Textile Cluster', 'Punjab Agro-Processing'].map((region) => (

@@ -26,7 +26,7 @@ export const sizeFactor = { small: 0.88, medium: 1, large: 1.12 };
 export const loadFactor = { shift: 0.82, extended: 1, continuous: 1.1 };
 
 export const chatData = {
-    title: 'Chat with Nature Energy',
+    title: 'Chat with Nature Organic Energy',
     status: 'Online now',
     avatar: 'NE',
     welcomeMsg: 'Hi! Need help choosing the right biomass burner? I can guide you through our energy-saving solutions! 🔥',

@@ -11,7 +11,7 @@ export function ResearchAndDevelopment() {
                 <Reveal>
                     <SectionTitle label="Innovation Focus" title="Research & Development Labs" />
                     <p className="mt-4 text-sm leading-relaxed text-[#5B707E]">
-                        Our in-house R&D wing continuously analyzes thermal dynamics, testing new refractory composites and automated control mechanisms to ensure Nature Energy burners remain at the cutting edge of industrial efficiency.
+                        Our in-house R&D wing continuously analyzes thermal dynamics, testing new refractory composites and automated control mechanisms to ensure Nature Organic Energy burners remain at the cutting edge of industrial efficiency.
                     </p>
                 </Reveal>
                 <div className="grid gap-4 sm:grid-cols-2">

@@ -9,7 +9,7 @@ export function CTASection({
     title = "Reduce Your Fuel Cost Today",
     text = "Switch to Biomass Pellet Burner & Save Up to 50% Minimum.",
     image = ctaConsultation,
-    primaryBtn = { text: "Contact Our Expert Team Now", to: "tel:+910000000000" },
+    primaryBtn = { text: "Contact Our Expert Team Now", to: "tel:+919904888070" },
     secondaryBtn = { text: "Request Free Consultation", to: "/contact" }
 }) {
     return (

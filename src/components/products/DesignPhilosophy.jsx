@@ -15,7 +15,7 @@ export function DesignPhilosophy() {
                         title="Built for the harshest industrial environments"
                     />
                     <p className="mt-4 text-sm leading-relaxed text-[#5B707E] md:text-base">
-                        At Nature Energy, our products are not simply assembled; they are engineered from the ground up to solve real-world industrial heating challenges. From continuous 24/7 operating cycles to extreme ambient temperatures, our systems deliver consistent thermal power.
+                        At Nature Organic Energy, our products are not simply assembled; they are engineered from the ground up to solve real-world industrial heating challenges. From continuous 24/7 operating cycles to extreme ambient temperatures, our systems deliver consistent thermal power.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-4">
                         {['Heavy-Duty Steel Construction', 'Refractory Chamber', 'Automated PLC logic'].map((item) => (

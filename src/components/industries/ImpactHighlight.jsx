@@ -16,7 +16,7 @@ export function ImpactHighlight() {
                 <Reveal className="order-1 lg:order-2 flex flex-col justify-center">
                     <SectionTitle label="Impact Highlight" title="Textile Dyeing Plant Saves ₹1.2L Monthly" />
                     <p className="mt-4 text-sm leading-relaxed text-[#5B707E]">
-                        A major cotton spinning and dyeing plant was burning 80 Litres of diesel per hour on their Thermic Fluid Heater. Within 48 hours, Nature Energy completely retrofitted their system with a 10L Kcal Biomass Burner.
+                        A major cotton spinning and dyeing plant was burning 80 Litres of diesel per hour on their Thermic Fluid Heater. Within 48 hours, Nature Organic Energy completely retrofitted their system with a 10L Kcal Biomass Burner.
                     </p>
                     <ul className="mt-5 space-y-3">
                         <li className="flex items-center gap-3">

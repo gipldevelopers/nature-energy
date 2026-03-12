@@ -18,8 +18,8 @@ export default function HomePage() {
         <main className="pb-8">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Nature Energy | Industrial Biomass Pellet Burners</title>
-                <meta name="description" content="Nature Energy provides high-efficiency industrial biomass pellet burners and reliable thermal heating solutions that reduce fuel costs by up to 50%." />
+                <title>Nature Organic Energy | Industrial Biomass Pellet Burners</title>
+                <meta name="description" content="Nature Organic Energy provides high-efficiency industrial biomass pellet burners and reliable thermal heating solutions that reduce fuel costs by up to 50%." />
                 <meta name="keywords" content="Industrial Pellet Burner Manufacturer India, Biomass Pellet Burner Supplier, Pellet Burner for Boiler, Bakery Oven Pellet Burner, Eco-Friendly Heating System" />
                 <link rel="canonical" href="https://natureenergy.in/" />
             </Helmet>

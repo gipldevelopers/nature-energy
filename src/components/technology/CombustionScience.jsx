@@ -14,7 +14,7 @@ export function CombustionScience() {
                     noReveal={true}
                 />
                 <p className="mt-4 text-sm leading-relaxed text-[#5B707E] md:text-base">
-                    Unlike traditional burners that simply burn fuel on a grate, Nature Energy technology uses a gasification-combustion hybrid. We convert solid biomass into combustible syngas within a primary chamber before injecting high-velocity secondary air.
+                    Unlike traditional burners that simply burn fuel on a grate, Nature Organic Energy technology uses a gasification-combustion hybrid. We convert solid biomass into combustible syngas within a primary chamber before injecting high-velocity secondary air.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                     <div className="rounded-xl bg-[#F2F6F7] p-4 border border-[#DCE3E6]/30">

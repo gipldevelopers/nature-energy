@@ -4,7 +4,7 @@ import { Reveal } from '../common/Reveal';
 
 export function PageHero({ label, title, subtitle, image }) {
     return (
-        <section className="mx-auto my-4 w-[min(1280px,94vw)] relative">
+        <section className="mx-auto mt-0 mb-8 w-[min(1280px,94vw)] relative">
             <div className="relative overflow-hidden rounded-[24px] border border-[#DCE3E6]">
                 <SafeImage src={image} alt={title} className="h-[45svh] min-h-[280px] sm:h-[56svh] sm:min-h-[360px] w-full object-cover" />
                 <div className="absolute inset-0 bg-[linear-gradient(130deg,rgba(53,70,83,0.88),rgba(6,111,130,0.68))]" />

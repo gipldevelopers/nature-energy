@@ -5,7 +5,7 @@ import { Reveal } from '../common/Reveal';
 export function ComponentBreakdown() {
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] rounded-[24px] border border-[#DCE3E6] bg-[#F2F6F7] p-6 md:p-10">
-            <SectionTitle label="Inside the Machine" title="Anatomy of a Nature Energy Burner" />
+            <SectionTitle label="Inside the Machine" title="Anatomy of a Nature Organic Energy Burner" />
             <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
                 {[
                     { title: 'Fuel Hopper', desc: 'Stores bulk pellets. Features anti-jamming vibrating screens.', num: '01' },

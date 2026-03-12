@@ -17,7 +17,7 @@ export function FuelVersatility() {
                     <div className="mt-8 flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm border border-[#DCE3E6]">
                         <Info size={24} className="text-[#078DA4] shrink-0" />
                         <p className="text-xs italic text-[#5B707E]">
-                            "The ability to switch between wood pellets and agro-waste pellets without recalibrating the hardware is a core Nature Energy patent-pending advantage."
+                            "The ability to switch between wood pellets and agro-waste pellets without recalibrating the hardware is a core Nature Organic Energy patent-pending advantage."
                         </p>
                     </div>
                 </div>

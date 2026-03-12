@@ -48,7 +48,7 @@ function AppShell() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.36, ease: 'easeOut' }}
-          className="pt-20"
+          className="pt-16 sm:pt-20"
         >
           <Routes location={location}>
             <Route path="/" element={<HomePage />} />

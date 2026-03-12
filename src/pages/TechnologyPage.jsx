@@ -22,7 +22,7 @@ export default function TechnologyPage() {
             <PageHero
                 label="Core Technology"
                 title="Industrial Bio-Thermal Engineering Redefined"
-                subtitle="From dual-stage air mapping to custom refractory castables, Nature Energy burners represent the pinnacle of biomass combustion science."
+                subtitle="From dual-stage air mapping to custom refractory castables, Nature Organic Energy burners represent the pinnacle of biomass combustion science."
                 image={imageSet.machine1}
             />
 

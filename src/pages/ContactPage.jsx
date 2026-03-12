@@ -14,7 +14,7 @@ export default function ContactPage() {
             <PageHero
                 label="Contact Us"
                 title="Speak to a thermal engineering expert today"
-                subtitle="Whether you need a custom burner quote, a fuel capacity audit, or immediately dispatched spare parts, the Nature Energy team is ready to assist your factory."
+                subtitle="Whether you need a custom burner quote, a fuel capacity audit, or immediately dispatched spare parts, the Nature Organic Energy team is ready to assist your factory."
                 image={imageSet.installSite}
             />
 

@@ -245,7 +245,7 @@ export const products = [
     image: imageSet.factoryHall,
     tagline: 'End-to-end engineered systems for special industrial thermal demand.',
     overview: [
-      'Nature Energy custom systems are designed from thermal load study to installation and commissioning. Each system is engineered around process reality, utility constraints, and production goals.',
+      'Nature Organic Energy custom systems are designed from thermal load study to installation and commissioning. Each system is engineered around process reality, utility constraints, and production goals.',
       'These projects typically include custom combustion chamber sizing, feeder architecture, controls, safety interlocks, and support frameworks tailored to site operating conditions.',
     ],
     highlights: [
@@ -327,7 +327,7 @@ export const industries = [
     name: 'Chemical Industry',
     image: imageSet.controlRoom,
     intro:
-      'Chemical plants require dependable process heat with strong safety control. Nature Energy systems provide managed combustion and reliable thermal delivery.',
+      'Chemical plants require dependable process heat with strong safety control. Nature Organic Energy systems provide managed combustion and reliable thermal delivery.',
     challenge:
       'Unstable fuel economics and process-critical heat demand can impact throughput, quality, and utility cost targets.',
     benefits: [
@@ -396,7 +396,7 @@ export const projects = [
     completionYear: '2023',
     projectDuration: '4 Months',
     challenge: 'The client had high furnace oil consumption across dryer lines and needed a reliable alternative without reducing production speed.',
-    solution: 'Nature Energy deployed an automatic pellet burner with custom feeder design and adaptive combustion controls tuned for variable drying load.',
+    solution: 'Nature Organic Energy deployed an automatic pellet burner with custom feeder design and adaptive combustion controls tuned for variable drying load.',
     result: 'Fuel spend dropped by nearly half while thermal consistency improved, leading to better line stability and lower maintenance interventions.',
     keyMetrics: [
       { label: 'Fuel Saving', value: '48%' },
@@ -411,7 +411,7 @@ export const projects = [
       { phase: 'Commissioning', detail: 'Installation and performance tuning on active line.' },
     ],
     testimonial: {
-      quote: "The switch to Nature Energy was smoother than expected. Our drying quality remains identical, but our fuel bills are down dramatically.",
+      quote: "The switch to Nature Organic Energy was smoother than expected. Our drying quality remains identical, but our fuel bills are down dramatically.",
       name: "Operations Manager",
       company: "Surat Textile Unit"
     }
@@ -473,7 +473,7 @@ export const projects = [
       { phase: 'Site Integration', detail: 'Piping and electrical interlocks with plant SCADA.' },
     ],
     testimonial: {
-      quote: "The safety logic in the Nature Energy system is top-notch. It integrated perfectly with our existing plant emergency protocols.",
+      quote: "The safety logic in the Nature Organic Energy system is top-notch. It integrated perfectly with our existing plant emergency protocols.",
       name: "Technical Director",
       company: "Pune Chemical Utility"
     }
@@ -547,7 +547,7 @@ export const faqGroups = [
     group: 'Fuel & Cost',
     items: [
       {
-        question: 'What fuel does a Nature Energy burner use?',
+        question: 'What fuel does a Nature Organic Energy burner use?',
         answer:
           'Our systems are designed for biomass pellets made from agricultural waste streams, enabling cost-efficient and cleaner industrial heating.',
       },
@@ -584,7 +584,7 @@ export const faqGroups = [
       {
         question: 'Do you provide installation and after-sales support?',
         answer:
-          'Yes. Nature Energy provides engineering, installation, commissioning, operator training, and post-installation support services.',
+          'Yes. Nature Organic Energy provides engineering, installation, commissioning, operator training, and post-installation support services.',
       },
     ],
   },

@@ -10,7 +10,7 @@ export function SmartPLC() {
             <SectionTitle
                 label="Automation"
                 title="Full Stack PLC Software Architecture"
-                text="Nature Energy burners are 'set and forget.' Our proprietary PLC logic handles the complexity of fuel feeding, draft sync, and PID temperature control automatically."
+                text="Nature Organic Energy burners are 'set and forget.' Our proprietary PLC logic handles the complexity of fuel feeding, draft sync, and PID temperature control automatically."
                 isDark={true}
                 isCentered={true}
             />

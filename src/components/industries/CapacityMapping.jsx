@@ -13,7 +13,7 @@ export function CapacityMapping() {
                 <Reveal>
                     <SectionTitle label="Capacity Mapping" title="Heat Outputs tailored to your plant size" />
                     <p className="mt-4 text-sm leading-relaxed text-[#5B707E]">
-                        A 1-ton textile steam boiler requires vastly different thermal geometry than a 20-foot baking oven. Nature Energy engineers map your exact Kcal requirements to our burner capacities.
+                        A 1-ton textile steam boiler requires vastly different thermal geometry than a 20-foot baking oven. Nature Organic Energy engineers map your exact Kcal requirements to our burner capacities.
                     </p>
                     <div className="mt-8 space-y-6">
                         {[

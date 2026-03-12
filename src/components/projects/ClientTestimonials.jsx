@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react';
 export function ClientTestimonials() {
     const reviews = [
         {
-            text: "Switching from furnace oil was a big decision, but the Nature Energy team handled everything. We saw savings from the very first month.",
+            text: "Switching from furnace oil was a big decision, but the Nature Organic Energy team handled everything. We saw savings from the very first month.",
             author: "Plant Director",
             company: "Apex Chemicals"
         },

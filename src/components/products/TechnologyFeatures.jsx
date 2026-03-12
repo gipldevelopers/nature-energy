@@ -9,7 +9,7 @@ export function TechnologyFeatures() {
             <div className="text-center">
                 <SectionTitle
                     label="Product Technology"
-                    title="What makes Nature Energy burners superior?"
+                    title="What makes Nature Organic Energy burners superior?"
                     isDark={true}
                 />
             </div>

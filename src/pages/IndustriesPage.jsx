@@ -22,7 +22,7 @@ export default function IndustriesPage() {
             <PageHero
                 label="Industries & Applications"
                 title="Industrial Biomass Heat Built for the Hardest Operating Environments"
-                subtitle="Nature Energy systems operate seamlessly in critical 24/7 manufacturing plants across textiles, chemicals, agro-processing, and heavy engineering, lowering diesel/gas costs dramatically."
+                subtitle="Nature Organic Energy systems operate seamlessly in critical 24/7 manufacturing plants across textiles, chemicals, agro-processing, and heavy engineering, lowering diesel/gas costs dramatically."
                 image={imageSet.steelPlant}
             />
 
@@ -39,7 +39,7 @@ export default function IndustriesPage() {
             <CTASection
                 label="Industries & Applications"
                 title="Is your industry ready for cheaper heat?"
-                text="Stop lighting your profits on fire with expensive diesel bills. Contact Nature Energy for a comprehensive factory audit."
+                text="Stop lighting your profits on fire with expensive diesel bills. Contact Nature Organic Energy for a comprehensive factory audit."
                 image={imageSet.steelPlant}
                 primaryBtn={{ text: "Schedule Technical Audit", to: "/contact" }}
                 secondaryBtn={{ text: "Learn More", to: "/about" }}

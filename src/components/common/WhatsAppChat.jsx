@@ -7,7 +7,7 @@ export function WhatsAppChat() {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleWhatsAppClick = (message = '') => {
-        const encodedMsg = encodeURIComponent(message || "Hi, I'm interested in Nature Energy biomass burners.");
+        const encodedMsg = encodeURIComponent(message || "Hi, I'm interested in Nature Organic Energy biomass burners.");
         window.open(`https://wa.me/91${contactInfo.whatsapp}?text=${encodedMsg}`, '_blank');
     };
 
@@ -15,7 +15,7 @@ export function WhatsAppChat() {
         <div className="fixed bottom-4 right-4 z-[200] flex flex-col items-end gap-3 md:bottom-5 md:right-5">
             {/* Chat Window */}
             {isOpen && (
-                <div className="mb-2 flex w-[300px] sm:w-[360px] max-h-[calc(100vh-100px)] flex-col overflow-hidden rounded-[24px] border border-[#DCE3E6] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] animate-in fade-in slide-in-from-bottom-6 duration-300">
+                <div className="mb-2 flex w-[280px] xs:w-[300px] sm:w-[360px] max-h-[80vh] flex-col overflow-hidden rounded-[24px] border border-[#DCE3E6] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] animate-in fade-in slide-in-from-bottom-6 duration-300">
                     {/* Header - Fixed */}
                     <div className="flex-none bg-[#25D366] p-4 sm:p-6 text-white relative">
                         <button 

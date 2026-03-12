@@ -11,7 +11,7 @@ export function SafetyStandards() {
                 <SectionTitle
                     label="Safety First"
                     title="Comprehensive Equipment Safety"
-                    text="Operating at extreme temperatures requires uncompromising safety protocols. Every Nature Energy burner is equipped with multi-layered mechanical and electronic safety overrides."
+                    text="Operating at extreme temperatures requires uncompromising safety protocols. Every Nature Organic Energy burner is equipped with multi-layered mechanical and electronic safety overrides."
                     isDark={true}
                 />
             </div>

@@ -8,7 +8,7 @@ export function PCBCompliance() {
                 <div className="flex-1">
                     <h2 className="text-2xl font-bold text-[#354653]">Pollution Control Board Approved</h2>
                     <p className="mt-3 text-sm leading-relaxed text-[#5B707E]">
-                        As environmental norms strictly crack down on furnace oil and coal systems across industrial zones, Nature Energy's biomass stack is listed as an approved, green-category renewable heating source.
+                        As environmental norms strictly crack down on furnace oil and coal systems across industrial zones, Nature Organic Energy's biomass stack is listed as an approved, green-category renewable heating source.
                     </p>
                 </div>
                 <div className="flex-none">

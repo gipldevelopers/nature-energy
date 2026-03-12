@@ -20,7 +20,7 @@ export function AirControlVFD() {
                 <SectionTitle
                     label="Variable Frequency"
                     title="VFD & Speed Calibration"
-                    text="Traditional burners use on/off fans. Nature Energy uses real-time frequency modulation (VFD) that responds in milliseconds to pressure changes within the boiler."
+                    text="Traditional burners use on/off fans. Nature Organic Energy uses real-time frequency modulation (VFD) that responds in milliseconds to pressure changes within the boiler."
                     noReveal={true}
                 />
                 <div>

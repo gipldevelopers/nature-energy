@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             <PageHero
                 label="Our Projects"
                 title="Industrial Success Stories Across India"
-                subtitle="From textile clusters to food processing plants, Nature Energy has transformed fuel-heavy factories into green-energy cost-saving leaders."
+                subtitle="From textile clusters to food processing plants, Nature Organic Energy has transformed fuel-heavy factories into green-energy cost-saving leaders."
                 image={imageSet.factoryHall}
             />
 
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
             <CTASection
                 label="Our Projects"
                 title="Ready for a Site Visit?"
-                text="We can arrange a visit for your technical team to a live Nature Energy installation near your location. See the savings and performance yourself."
+                text="We can arrange a visit for your technical team to a live Nature Organic Energy installation near your location. See the savings and performance yourself."
                 image={imageSet.boilerRoom}
                 primaryBtn={{ text: "Book A Site Visit", to: "/contact" }}
                 secondaryBtn={{ text: "Our Technology", to: "/technology" }}
