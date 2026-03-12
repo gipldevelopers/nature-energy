@@ -20,7 +20,7 @@ export function CTASection({
                     {/* Content Side */}
                     <div className="flex flex-[1.2] flex-col justify-center p-7 md:p-10 lg:p-12">
                         <Reveal>
-                            <span className="mb-3 inline-block text-[10px] font-bold tracking-[0.2em] text-[#078DA4] uppercase">
+                            <span className="mb-3 inline-flex rounded-full border border-[#DCE3E6] bg-[#F2F6F7] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#066F82]">
                                 {label}
                             </span>
                             <h2 className="mb-4 text-2xl font-bold tracking-tight text-[#354653] md:text-3xl lg:text-[32px] lg:leading-[1.2]">

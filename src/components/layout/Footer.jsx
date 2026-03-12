@@ -44,15 +44,15 @@ export function Footer() {
                     <p className="mt-2 max-w-md text-sm leading-relaxed text-[#354653] font-bold">
                         Choose Nature Organic Energy.
                     </p>
-                    <div className="mt-5 grid gap-2 text-sm text-[#5B707E]">
-                        <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
-                            <Phone size={15} /> +91 {contactInfo.mobile}
+                    <div className="mt-5 flex flex-col gap-3 text-sm text-[#5B707E]">
+                        <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-start gap-2.5 hover:text-[#066F82] transition-colors">
+                            <Phone size={16} className="shrink-0 mt-0.5" /> <span>+91 {contactInfo.mobile}</span>
                         </a>
-                        <a href={`mailto:${contactInfo.email}`} className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
-                            <Mail size={15} /> {contactInfo.email}
+                        <a href={`mailto:${contactInfo.email}`} className="inline-flex items-start gap-2.5 hover:text-[#066F82] transition-colors">
+                            <Mail size={16} className="shrink-0 mt-0.5" /> <span>{contactInfo.email}</span>
                         </a>
-                        <a href={contactInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
-                            <MapPin size={15} /> {contactInfo.address}
+                        <a href={contactInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-2.5 hover:text-[#066F82] transition-colors leading-relaxed">
+                            <MapPin size={16} className="shrink-0 mt-0.5" /> <span>{contactInfo.address}</span>
                         </a>
                     </div>
                 </div>

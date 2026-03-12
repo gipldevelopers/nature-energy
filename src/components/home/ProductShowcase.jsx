@@ -15,16 +15,16 @@ export function ProductShowcase() {
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
 
             {/* ── Header strip ── */}
-            <div className="flex items-center justify-between border-b border-[#DCE3E6] bg-[#F2F6F7] px-6 py-5 md:px-9">
+            <div className="flex flex-col items-start justify-between gap-4 border-b border-[#DCE3E6] bg-[#F2F6F7] px-6 py-5 md:flex-row md:items-center md:gap-0 md:px-9">
                 <div className="min-w-0 flex-1">
                     <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#078DA4]">Products</span>
-                    <h2 className="mt-1 truncate text-xl font-bold text-[#354653] md:text-2xl">
+                    <h2 className="mt-1 text-xl font-bold leading-tight text-[#354653] md:text-2xl">
                         Ultra-modern biomass burner product showcase
                     </h2>
                 </div>
                 <Link
                     to="/products"
-                    className="ml-4 hidden flex-none items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white md:inline-flex"
+                    className="flex-none inline-flex items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white md:ml-4"
                 >
                     All Products <ArrowRight size={14} />
                 </Link>

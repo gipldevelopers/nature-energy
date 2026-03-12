@@ -23,7 +23,7 @@ export function AirControlVFD() {
                     text="Traditional burners use on/off fans. Nature Organic Energy uses real-time frequency modulation (VFD) that responds in milliseconds to pressure changes within the boiler."
                     noReveal={true}
                 />
-                <div>
+                <div className="mt-6 flex flex-wrap gap-3">
                     {['Zero Inrush Current', 'Soft Start/Stop', 'Noise Mitigation', 'Energy Conservation'].map((ft) => (
                         <span key={ft} className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#DCE3E6] bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#354653]">
                             <Settings size={14} className="text-[#078DA4]" /> {ft}

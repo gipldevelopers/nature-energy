@@ -37,16 +37,16 @@ export function IndustriesServed() {
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
             {/* Top label row */}
-            <div className="flex items-center justify-between border-b border-[#DCE3E6] bg-[#F2F6F7] px-6 py-5 md:px-9">
+            <div className="flex flex-col items-start justify-between gap-4 border-b border-[#DCE3E6] bg-[#F2F6F7] px-6 py-5 md:flex-row md:items-center md:gap-0 md:px-9">
                 <div className="min-w-0 flex-1 pr-4">
                     <span className="inline-flex rounded-full border border-[#DCE3E6] bg-[#FDFEFD] px-3 py-1 text-xs uppercase tracking-[0.12em] text-[#066F82]">Industries Served</span>
-                    <h2 className="mt-2 truncate text-xl font-semibold text-[#354653] md:text-2xl">
+                    <h2 className="mt-2 text-xl font-semibold leading-tight text-[#354653] md:text-2xl">
                         Industrial applications powered by biomass pellet burner systems
                     </h2>
                 </div>
                 <Link
                     to="/industries"
-                    className="hidden flex-none items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(7,141,164,0.3)] md:inline-flex"
+                    className="flex-none inline-flex items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(7,141,164,0.3)] md:ml-4"
                 >
                     All Industries <ArrowRight size={14} />
                 </Link>

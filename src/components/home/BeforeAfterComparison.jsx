@@ -78,19 +78,21 @@ export function BeforeAfterComparison() {
             </div>
 
             {/* Annual Savings Footer Bar */}
-            <Reveal className="mt-8 overflow-hidden rounded-[20px] bg-[#354653] p-6 md:px-10">
-                <div className="flex flex-col items-center justify-between gap-4 md:flex-row text-center md:text-left">
-                    <div className="flex flex-col gap-1">
-                        <h4 className="text-[10px] font-bold text-white/50 uppercase tracking-widest">Potential Annual Benefit</h4>
-                        <p className="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                            {formatINR(savingCounter)} <span className="text-sm font-medium text-[#2BB673]">Saved</span>
-                        </p>
+            <div className="mt-8 flex justify-center">
+                <Reveal className="overflow-hidden rounded-[20px] bg-[#354653] px-6 py-4 md:px-8 w-fit max-w-2xl">
+                    <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8 text-center md:text-left">
+                        <div className="flex flex-col gap-0.5">
+                            <h4 className="text-[10px] font-bold text-white/50 uppercase tracking-widest">Potential Annual Benefit</h4>
+                            <p className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                                {formatINR(savingCounter)} <span className="text-sm font-medium text-[#2BB673]">Saved</span>
+                            </p>
+                        </div>
+                        <button className="rounded-full bg-[#2BB673] px-7 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-[#2BB673]/20 transition-transform hover:scale-105 active:scale-95 whitespace-nowrap">
+                            Calculate Your ROI
+                        </button>
                     </div>
-                    <button className="rounded-full bg-[#2BB673] px-7 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-[#2BB673]/20 transition-transform hover:scale-105 active:scale-95">
-                        Calculate Your ROI
-                    </button>
-                </div>
-            </Reveal>
+                </Reveal>
+            </div>
         </section>
     );
 }
