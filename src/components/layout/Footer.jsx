@@ -91,8 +91,33 @@ export function Footer() {
                     </a>
                 </div>
             </div>
-            <div className="border-t border-[#DCE3E6] py-4 text-center text-xs text-[#9EABAE]">
-                © {new Date().getFullYear()} Nature Organic Energy. All rights reserved.
+            <div className="border-t border-[#DCE3E6] py-6 bg-white">
+                <div className="mx-auto flex w-[min(1280px,94vw)] flex-col items-center justify-between gap-4 md:flex-row">
+                    <div className="flex flex-col items-center gap-1 text-center md:items-start md:text-left">
+                        <p className="text-sm text-[#5B707E]">
+                            © {new Date().getFullYear()} Nature Organic Energy. All rights reserved.
+                        </p>
+                        <div className="flex gap-4 text-xs font-medium text-[#078DA4]">
+                            <Link to="/privacy-policy" className="transition-colors hover:text-[#066F82] hover:underline">
+                                Privacy Policy
+                            </Link>
+                            <Link to="/terms-conditions" className="transition-colors hover:text-[#066F82] hover:underline">
+                                Terms and Conditions
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                        <span className="text-xs font-medium text-[#9EABAE]">Powered by</span>
+                        <a href="https://greenidea.in/" target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100 transition-opacity">
+                            <img 
+                                src="/gipl-logo-transparent.png" 
+                                alt="GIPL Logo" 
+                                className="h-8 md:h-10 object-contain"
+                            />
+                        </a>
+                    </div>
+                </div>
             </div>
         </footer>
     );

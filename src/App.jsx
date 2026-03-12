@@ -26,6 +26,8 @@ import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import DealerPage from './pages/DealerPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
 
 import './App.css';
 
@@ -66,6 +68,8 @@ function AppShell() {
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/dealer" element={<DealerPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Motion.div>
