@@ -42,7 +42,7 @@ export default function ProductsPage() {
                 text="Our engineering team is ready to analyze your current fuel consumption and calculate the exact payback period for a new Nature Energy pellet burner."
                 image={imageSet.burnerMain}
                 primaryBtn={{ text: "Get A Custom Quote", to: "/contact" }}
-                secondaryBtn={{ text: "View Details", to: "/products" }}
+                secondaryBtn={{ text: "View Technical Specs", to: "/products/industrial-pellet-burner" }}
             />
         </main>
     );

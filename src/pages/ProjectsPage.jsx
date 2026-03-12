@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                 text="We can arrange a visit for your technical team to a live Nature Energy installation near your location. See the savings and performance yourself."
                 image={imageSet.boilerRoom}
                 primaryBtn={{ text: "Book A Site Visit", to: "/contact" }}
-                secondaryBtn={{ text: "View Success Stories", to: "/projects" }}
+                secondaryBtn={{ text: "Our Technology", to: "/technology" }}
             />
         </main>
     );

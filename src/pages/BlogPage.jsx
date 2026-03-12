@@ -41,7 +41,7 @@ export default function BlogPage() {
                 text="Join 2,000+ factory owners and utility engineers receiving our weekly technical digests on biomass technology."
                 image={imageSet.burnerMain}
                 primaryBtn={{ text: "Talk To Our Experts", to: "/contact" }}
-                secondaryBtn={{ text: "Read More Articles", to: "/blog" }}
+                secondaryBtn={{ text: "Our Technology", to: "/technology" }}
             />
         </main>
     );
