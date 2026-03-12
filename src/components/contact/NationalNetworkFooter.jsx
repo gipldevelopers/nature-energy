@@ -3,7 +3,7 @@ import { Reveal } from '../common/Reveal';
 import { SafeImage } from '../common/SafeImage';
 import { Globe, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { imageSet } from '../../data/siteData';
+import { imageSet, contactInfo } from '../../data/siteData';
 import { cardBase } from '../../constants/siteConstants';
 
 export function NationalNetworkFooter() {
@@ -25,9 +25,9 @@ export function NationalNetworkFooter() {
                     <p className="mt-4 text-sm leading-relaxed text-[#FDFEFD]/80">
                         Are you a boiler manufacturer looking for a reliable biomass burner OEM? Or a pellet supplier wanting to build a network? We are always looking for strategic industrial partnerships.
                     </p>
-                    <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-md transition hover:bg-white/20">
+                    <a href={`mailto:${contactInfo.email}`} className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-md transition hover:bg-white/20">
                         Email Our Directors <ArrowRight size={16} />
-                    </Link>
+                    </a>
                 </div>
             </Reveal>
         </section>

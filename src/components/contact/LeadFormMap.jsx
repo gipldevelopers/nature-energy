@@ -164,9 +164,14 @@ export function LeadFormMap() {
                             <MapPin size={24} className="text-[#078DA4] flex-none" />
                             <div>
                                 <p className="text-sm font-bold text-[#354653]">Manufacturing Unit Address</p>
-                                <p className="mt-1 text-xs text-[#5B707E] leading-relaxed">
+                                <a 
+                                    href={contactInfo.googleMapsUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="mt-1 text-xs text-[#5B707E] leading-relaxed hover:text-[#078DA4] transition-colors block"
+                                >
                                     {contactInfo.address}
-                                </p>
+                                </a>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">

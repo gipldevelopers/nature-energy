@@ -70,6 +70,7 @@ export const contactInfo = {
   email: 'natureenergy-sales@gmail.com',
   whatsapp: '9904888070',
   mapEmbedUrl: 'https://maps.google.com/maps?q=01,%20Bhagwati%20Nagar%20OPP%20Kathwada%20GIDC%20%26%20Indore%20Highway,%20Kathwada,%20Ahmedabad%20382430&t=&z=13&ie=UTF8&iwloc=&output=embed',
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=01,+Bhagwati+Nagar+OPP+Kathwada+GIDC+%26+Indore+Highway,+Kathwada,+Ahmedabad+382430',
   referenceWebsites: [
     { name: 'Burner India', url: '#' },
     { name: 'Green Fire', url: '#' }

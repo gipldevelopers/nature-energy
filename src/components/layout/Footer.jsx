@@ -51,9 +51,9 @@ export function Footer() {
                         <a href={`mailto:${contactInfo.email}`} className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
                             <Mail size={15} /> {contactInfo.email}
                         </a>
-                        <p className="inline-flex items-center gap-2">
+                        <a href={contactInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-[#066F82] transition-colors">
                             <MapPin size={15} /> {contactInfo.address}
-                        </p>
+                        </a>
                     </div>
                 </div>
 
@@ -83,12 +83,12 @@ export function Footer() {
                         Share your current fuel type, monthly utility cost, and heating load. Our engineering team will suggest the
                         right biomass system with expected savings.
                     </p>
-                    <Link
-                        to="/contact"
+                    <a
+                        href={`tel:${contactInfo.mobile}`}
                         className="mt-4 inline-flex rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-4 py-2 text-sm font-semibold text-[#FDFEFD]"
                     >
                         Request Consultation
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className="border-t border-[#DCE3E6] py-4 text-center text-xs text-[#9EABAE]">

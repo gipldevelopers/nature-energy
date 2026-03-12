@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { imageSet } from '../../data/siteData';
+import { imageSet, contactInfo } from '../../data/siteData';
 import { Reveal } from '../common/Reveal';
 import { ParticleField } from '../common/ParticleField';
 import { MagneticLink } from '../common/MagneticLink';
@@ -75,7 +75,7 @@ export function HeroSection() {
                             <MagneticLink to="/contact#contact_form" variant="primary">
                                 Get Free Quotation Today <ArrowRight size={15} />
                             </MagneticLink>
-                            <MagneticLink to="/contact#contact_form" variant="ghost">
+                            <MagneticLink to={`tel:${contactInfo.mobile}`} variant="ghost">
                                 Request Consultation
                             </MagneticLink>
                         </div>
