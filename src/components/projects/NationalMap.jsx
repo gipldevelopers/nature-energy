@@ -24,7 +24,7 @@ export function NationalMap() {
                     ))}
                 </div>
             </Reveal>
-            <div className="relative min-h-[400px] bg-[#1e2d38] overflow-hidden">
+            <Reveal className="relative min-h-[400px] bg-[#1e2d38] overflow-hidden" delay={200}>
                 {/* Simplified visual map representation */}
                 <div className="absolute inset-0 opacity-20">
                     <svg viewBox="0 0 800 800" className="h-full w-full fill-white">
@@ -44,7 +44,7 @@ export function NationalMap() {
                     <p className="text-2xl font-black text-white">450+</p>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-[#66D9E8]">Total Units Live</p>
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }

@@ -3,16 +3,17 @@ import { ArrowUpRight } from 'lucide-react';
 import { SectionTitle } from '../common/SectionTitle';
 import { Reveal } from '../common/Reveal';
 import { SafeImage } from '../common/SafeImage';
-import { imageSet } from '../../data/siteData';
+import { projects } from '../../data/siteData';
 import { cardBase } from '../../constants/siteConstants';
 
 export function IndustryInstallations() {
-    const installs = [
-        { name: 'Textile Dyeing', location: 'Tiruppur, TN', scale: '1.5M Kcal', image: imageSet.textile, slug: 'surat-textile-retrofit' },
-        { name: 'Food Processing', location: 'Nashik, MH', scale: '500K Kcal', image: imageSet.foodLine, slug: 'vadodara-food-boiler' },
-        { name: 'Chemical Reactor', location: 'Ankleshwar, GJ', scale: '2.5M Kcal', image: imageSet.controlRoom, slug: 'pune-chemical-utility' },
-        { name: 'Hospitality Boiler', location: 'Udaipur, RJ', scale: '300K Kcal', image: imageSet.installSite, slug: 'surat-textile-retrofit' },
-    ];
+    const installs = projects.map(p => ({
+        name: p.name,
+        location: p.location,
+        scale: p.capacity,
+        image: p.image,
+        slug: p.slug
+    }));
 
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] rounded-[24px] border border-[#DCE3E6] bg-[#F2F6F7] p-8 md:p-12">
@@ -21,8 +22,8 @@ export function IndustryInstallations() {
                 title="Specialized Installs per Industry"
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {installs.map((item) => (
-                    <Reveal key={item.name} className={`${cardBase} group overflow-hidden p-0 transition-all duration-300 hover:shadow-2xl`}>
+                {installs.map((item, idx) => (
+                    <Reveal key={item.name} delay={idx * 100} className={`${cardBase} group overflow-hidden p-0 transition-all duration-300 hover:shadow-2xl`}>
                         <Link to={`/projects/${item.slug}`} className="block h-full group">
                             <div className="relative h-48 overflow-hidden">
                                 <SafeImage src={item.image} alt={item.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
