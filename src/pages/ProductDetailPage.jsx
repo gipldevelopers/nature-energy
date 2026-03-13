@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { CheckCircle2, ArrowLeft, ChevronDown, ChevronUp, ArrowRight, Cpu, ShieldCheck, Wrench } from 'lucide-react';
+import { CheckCircle2, ArrowLeft, ChevronDown, ChevronUp, ArrowRight, Cpu, ShieldCheck, Wrench, Play, Pause } from 'lucide-react';
 import { PageHero } from '../components/layout/PageHero';
 import { SectionTitle } from '../components/common/SectionTitle';
 import { Reveal } from '../components/common/Reveal';
@@ -32,6 +32,19 @@ function FAQItem({ q, a }) {
 export default function ProductDetailPage() {
     const { slug } = useParams();
     const product = products.find((item) => item.slug === slug);
+    const videoRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    const togglePlay = () => {
+        if (videoRef.current) {
+            if (isPaused) {
+                videoRef.current.play();
+            } else {
+                videoRef.current.pause();
+            }
+            setIsPaused(!isPaused);
+        }
+    };
 
     if (!product) return <NotFoundPage />;
 
@@ -68,14 +81,41 @@ export default function ProductDetailPage() {
                         ))}
                     </div>
                 </Reveal>
-                <Reveal className={`${cardBase} overflow-hidden p-0`}>
-                    <SafeImage src={product.image} alt={product.name} className="h-56 w-full object-cover" />
-                    <div className="p-6">
+                <Reveal className={`${cardBase} overflow-hidden p-0 flex flex-col`}>
+                    <div className="relative w-full bg-[#F8FAFB] flex items-center justify-center min-h-[300px]">
+                        {product.video ? (
+                            <div className="relative w-full h-full flex items-center justify-center group/vid">
+                                <video
+                                    ref={videoRef}
+                                    src={product.video}
+                                    className="w-full h-auto max-h-[450px] object-contain z-10"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                                {/* Play/Pause Overlay */}
+                                <button
+                                    onClick={togglePlay}
+                                    className="absolute inset-0 z-20 flex items-center justify-center bg-black/10 opacity-0 group-hover/vid:opacity-100 transition-opacity"
+                                >
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 blur-sm absolute" />
+                                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#078DA4] text-white shadow-xl transform transition hover:scale-110 active:scale-95">
+                                        {isPaused ? <Play size={20} fill="currentColor" /> : <Pause size={20} fill="currentColor" />}
+                                    </div>
+                                </button>
+                            </div>
+                        ) : (
+                            <SafeImage src={product.image} alt={product.name} className="h-72 w-full object-cover" />
+                        )}
+                    </div>
+                    <div className="p-6 bg-white border-t border-[#DCE3E6]">
                         <p className="text-xs font-bold uppercase tracking-widest text-[#078DA4]">System Highlights</p>
-                        <ul className="mt-3 grid gap-2">
+                        <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {product.applications.slice(0, 4).map(app => (
                                 <li key={app} className="flex items-center gap-2 text-sm text-[#5B707E]">
-                                    <div className="h-1.5 w-1.5 rounded-full bg-[#078DA4]" /> {app}
+                                    <div className="h-1.5 w-1.5 rounded-full bg-[#078DA4] shrink-0" />
+                                    <span>{app}</span>
                                 </li>
                             ))}
                         </ul>

@@ -31,8 +31,8 @@ export default function GalleryPage() {
                             type="button"
                             onClick={() => setFilter(category)}
                             className={`whitespace-nowrap rounded-full border px-4 py-2 text-xs uppercase tracking-[0.08em] flex-shrink-0 ${filter === category
-                                    ? 'border-[#078DA4]/40 bg-[#078DA4]/12 text-[#066F82]'
-                                    : 'border-[#DCE3E6] text-[#5B707E]'
+                                ? 'border-[#078DA4]/40 bg-[#078DA4]/12 text-[#066F82]'
+                                : 'border-[#DCE3E6] text-[#5B707E]'
                                 }`}
                         >
                             {category}

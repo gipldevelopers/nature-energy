@@ -24,11 +24,11 @@ export default function DealerPage() {
 
             <section className="mx-auto mt-12 w-[min(1280px,94vw)] max-w-4xl">
                 <Reveal className="rounded-[24px] border border-[#DCE3E6] bg-[#FDFEFD] p-8 md:p-12 shadow-sm">
-                    <SectionTitle 
-                        label="Partnership" 
-                        title="Benefits of Partnering with Nature Organic Energy" 
+                    <SectionTitle
+                        label="Partnership"
+                        title="Benefits of Partnering with Nature Organic Energy"
                     />
-                    
+
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
                         {benefits.map((benefit, idx) => (
                             <div key={idx} className="flex items-center gap-4 rounded-xl border border-[#DCE3E6]/60 bg-[#F2F6F7] p-5">
