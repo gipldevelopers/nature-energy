@@ -19,12 +19,23 @@ export function ProductPortfolio() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map((product) => (
                     <Reveal key={product.slug} className="group relative flex flex-col rounded-[20px] border border-[#DCE3E6] bg-white p-3 transition-all duration-300 hover:shadow-lg hover:shadow-[#066F82]/5">
-                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[14px] border border-[#DCE3E6]/30">
-                            <SafeImage
-                                src={product.image}
-                                alt={product.name}
-                                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
+                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[14px] border border-[#DCE3E6]/30 bg-[#F8FAFB] flex items-center justify-center">
+                            {product.video ? (
+                                <video
+                                    src={product.video}
+                                    className="h-full w-full object-contain"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                            ) : (
+                                <SafeImage
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                            )}
                         </div>
 
                         <div className="mt-3 flex flex-1 flex-col px-1">

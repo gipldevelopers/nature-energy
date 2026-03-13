@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronRight, Play, Pause } from 'lucide-react';
 import { SafeImage } from '../common/SafeImage';
 import { products } from '../../data/siteData';
 
@@ -9,7 +9,18 @@ const Motion = motion;
 
 export function ProductShowcase() {
     const [active, setActive] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
     const current = products[active];
+
+    // Auto-scroll logic
+    useEffect(() => {
+        if (isPaused) return;
+
+        const interval = setInterval(() => {
+            setActive((prev) => (prev + 1) % products.length);
+        }, 6000);
+        return () => clearInterval(interval);
+    }, [isPaused]);
 
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
@@ -22,12 +33,25 @@ export function ProductShowcase() {
                         Ultra-modern biomass burner product showcase
                     </h2>
                 </div>
-                <Link
-                    to="/products"
-                    className="flex-none inline-flex items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white md:ml-4"
-                >
-                    All Products <ArrowRight size={14} />
-                </Link>
+                <div className="flex items-center gap-3">
+                    <button
+                        onClick={() => setIsPaused(!isPaused)}
+                        className={`flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold transition-all ${isPaused
+                            ? 'border-[#078DA4] bg-white text-[#078DA4]'
+                            : 'border-transparent bg-[#078DA4]/10 text-[#078DA4]'
+                            }`}
+                        title={isPaused ? "Resume Auto-scroll" : "Pause Auto-scroll"}
+                    >
+                        {isPaused ? <Play size={14} fill="currentColor" /> : <Pause size={14} fill="currentColor" />}
+                        {isPaused ? "RESUME" : "PAUSE"}
+                    </button>
+                    <Link
+                        to="/products"
+                        className="flex-none inline-flex items-center gap-2 rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-2.5 text-sm font-semibold text-white"
+                    >
+                        All Products <ArrowRight size={14} />
+                    </Link>
+                </div>
             </div>
 
             {/* ── Main layout ── */}
@@ -41,7 +65,9 @@ export function ProductShowcase() {
                             <button
                                 key={product.slug}
                                 type="button"
-                                onClick={() => setActive(idx)}
+                                onClick={() => {
+                                    setActive(idx);
+                                }}
                                 className="relative flex flex-none flex-col items-start border-r border-[#DCE3E6] px-5 py-4 text-left transition-all duration-200 last:border-r-0 md:border-b md:border-r-0 md:last:border-b-0"
                                 style={{ background: isActive ? `linear-gradient(135deg, #078DA410, transparent)` : 'white' }}
                             >
@@ -85,33 +111,61 @@ export function ProductShowcase() {
                             className="flex flex-col md:flex-row md:min-h-[440px]"
                         >
                             {/* Image section — dark bg */}
-                            <div className="relative md:w-[46%] overflow-hidden bg-[#1e2d38]">
+                            <div className="relative md:w-[46%] overflow-hidden bg-[#1e2d38] flex items-center justify-center">
                                 {/* Grid texture */}
                                 <div
-                                    className="pointer-events-none absolute inset-0 opacity-[0.07]"
+                                    className="pointer-events-none absolute inset-0 opacity-[0.07] z-20"
                                     style={{
                                         backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)',
                                         backgroundSize: '32px 32px',
                                     }}
                                 />
 
-                                {/* Product image */}
-                                <SafeImage
-                                    src={current.image}
-                                    alt={current.name}
-                                    className="relative z-10 h-44 w-full object-cover sm:h-64 md:h-full"
-                                />
+                                {/* Product image/video - used object-cover to fill container and remove black space */}
+                                {current.video ? (
+                                    <div key={current.video} className="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-full bg-[#0a1118] flex items-center justify-center">
+                                        {/* Dynamic blurred background to perfectly fill any remaining space */}
+                                        <video
+                                            src={current.video}
+                                            className="absolute inset-0 h-full w-full object-cover blur-3xl opacity-50 scale-125"
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload="auto"
+                                        />
+                                        {/* Main video - set to object-contain so the FULL frame is visible without cropping */}
+                                        <video
+                                            src={current.video}
+                                            className="relative z-10 h-full w-full object-contain drop-shadow-2xl"
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload="auto"
+                                            disablePictureInPicture
+                                        />
+                                    </div>
+                                ) : (
+                                    <SafeImage
+                                        src={current.image}
+                                        alt={current.name}
+                                        className="relative z-10 h-64 w-full object-cover sm:h-64 md:h-full"
+                                    />
+                                )}
 
                                 {/* Spec badges floating at bottom */}
-                                {current.specs.slice(0, 2).map(([key, val]) => (
-                                    <div
-                                        key={key}
-                                        className="absolute bottom-4 left-4 z-20 rounded-xl border border-white/15 bg-white/10 px-2 py-1.5 backdrop-blur-md first-of-type:left-4 last-of-type:left-auto last-of-type:right-4 max-w-[45%]"
-                                    >
-                                        <p className="text-[9px] font-bold uppercase tracking-widest text-white/50">{key}</p>
-                                        <p className="mt-0.5 text-xs font-semibold text-white">{val}</p>
-                                    </div>
-                                ))}
+                                <div className="absolute bottom-4 left-0 right-0 z-30 flex justify-between px-4">
+                                    {current.specs.slice(0, 2).map(([key, val]) => (
+                                        <div
+                                            key={key}
+                                            className="rounded-xl border border-white/20 bg-black/40 px-3 py-1.5 backdrop-blur-md max-w-[48%]"
+                                        >
+                                            <p className="text-[9px] font-bold uppercase tracking-widest text-white/60">{key}</p>
+                                            <p className="mt-0.5 text-[11px] font-bold text-white leading-tight">{val}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
                             {/* Content section */}

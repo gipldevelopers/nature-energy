@@ -22,6 +22,34 @@ import foodLineImg     from '../assets/images/food_line.jpg';      // Food proce
 import imagesImg       from '../assets/images/images.jpg';         // Additional industrial view
 import pelletStorage   from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
 
+import vid3 from '../assets/media/vid3.mp4';
+import vid9 from '../assets/media/vid9.mp4';
+import vid7 from '../assets/media/vid7.mp4';
+import vid10 from '../assets/media/vid10.mp4';
+import vid13 from '../assets/media/vid13.mp4';
+import vid14 from '../assets/media/vid14.mp4';
+import vid17 from '../assets/media/vid17.mp4';
+import vid16 from '../assets/media/vid16.mp4';
+
+// ── About Page Assets ──
+import aboutCompanyVid from '../assets/media/about_company.mp4';
+
+// ── Project Images ──
+import project1 from '../assets/media/project_1.jpg';
+import project2 from '../assets/media/project_2.jpg';
+import project3 from '../assets/media/project_3.jpg';
+
+export const aboutAssets = {
+  aboutCompanyVid
+};
+
+export const blogAssets = {
+    vid13,
+    vid14,
+    vid17,
+    vid16
+};
+
 export const imageSet = {
   // Core (PNG – used in hero & product cards)
   heroBg,
@@ -89,6 +117,7 @@ export const products = [
     slug: 'industrial-pellet-burner',
     name: 'Industrial Pellet Burner',
     image: imageSet.machine1,
+    video: vid3,
     tagline: 'Heavy-duty burner for high-demand process heating environments.',
     overview: [
       'The Industrial Pellet Burner is designed for continuous manufacturing environments where thermal load is high and process consistency is critical. Its combustion chamber geometry and air distribution logic are optimized for complete pellet burn and stable output.',
@@ -144,6 +173,7 @@ export const products = [
     slug: 'boiler-pellet-burner',
     name: 'Boiler Pellet Burner',
     image: imageSet.boilerRoom,
+    video: vid9,
     tagline: 'High-efficiency combustion solution for industrial boilers.',
     overview: [
       'The Boiler Pellet Burner platform is engineered for steam generation reliability with controlled flame shape and temperature management.',
@@ -194,6 +224,7 @@ export const products = [
     slug: 'bakery-oven-pellet-burner',
     name: 'Bakery Oven Pellet Burner',
     image: imageSet.foodLine,
+    video: vid7,
     tagline: 'Precision thermal output for bakery and food oven systems.',
     overview: [
       'This model is tuned for consistent oven heating where batch quality depends on repeatable thermal curves.',
@@ -244,6 +275,7 @@ export const products = [
     slug: 'custom-biomass-heating-systems',
     name: 'Custom Biomass Heating Systems',
     image: imageSet.factoryHall,
+    video: vid10,
     tagline: 'End-to-end engineered systems for special industrial thermal demand.',
     overview: [
       'Nature Organic Energy custom systems are designed from thermal load study to installation and commissioning. Each system is engineered around process reality, utility constraints, and production goals.',
@@ -389,7 +421,7 @@ export const projects = [
   {
     slug: 'surat-textile-retrofit',
     name: 'Textile Dryer Retrofit Program',
-    image: imageSet.textile,
+    image: project1,
     location: 'Surat, Gujarat',
     industry: 'Textile Manufacturing',
     capacity: '1,200,000 kcal/hr',
@@ -420,7 +452,7 @@ export const projects = [
   {
     slug: 'vadodara-food-boiler',
     name: 'Food Plant Boiler Conversion',
-    image: imageSet.foodLine,
+    image: project2,
     location: 'Vadodara, Gujarat',
     industry: 'Food Processing',
     capacity: '900,000 kcal/hr',
@@ -451,7 +483,7 @@ export const projects = [
   {
     slug: 'pune-chemical-utility',
     name: 'Chemical Utility Heating Upgrade',
-    image: imageSet.controlRoom,
+    image: project3,
     location: 'Pune, Maharashtra',
     industry: 'Chemical Industry',
     capacity: '1,500,000 kcal/hr',
@@ -486,6 +518,7 @@ export const blogs = [
     slug: 'diesel-vs-biomass-fuel-cost-comparison',
     title: 'Diesel vs Biomass Fuel Cost Comparison for Industrial Heating',
     image: imageSet.boilerRoom,
+    video: blogAssets.vid16,
     excerpt:
       'A detailed operational cost comparison framework for plants evaluating burner conversion from diesel to biomass pellets.',
     content: [
