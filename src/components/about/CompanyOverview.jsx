@@ -2,7 +2,7 @@ import React from 'react';
 import { Factory, Leaf } from 'lucide-react';
 import { Reveal } from '../common/Reveal';
 import { SafeImage } from '../common/SafeImage';
-import { imageSet } from '../../data/siteData';
+import { imageSet, aboutAssets } from '../../data/siteData';
 import { cardBase } from '../../constants/siteConstants';
 
 export function CompanyOverview() {
@@ -32,9 +32,28 @@ export function CompanyOverview() {
                 </p>
             </Reveal>
 
-            <Reveal className={`${cardBase} relative overflow-hidden p-0 min-h-[360px]`}>
-                <SafeImage src={imageSet.steelPlant} alt="Manufacturing facility overview" className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#1e2d38] to-transparent p-6 pt-24 text-white">
+            <Reveal className={`${cardBase} relative overflow-hidden p-0 min-h-[400px] flex items-center justify-center bg-black`}>
+                {/* Blurred Background to fill empty space */}
+                <video 
+                    src={aboutAssets.aboutCompanyVid} 
+                    className="absolute inset-0 h-full w-full object-cover blur-xl opacity-40 scale-110"
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                />
+                
+                {/* Main Video (Full frame, no cutting) */}
+                <video 
+                    src={aboutAssets.aboutCompanyVid} 
+                    className="relative z-10 w-full h-auto max-h-full object-contain shadow-2xl"
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                />
+                <div className="absolute inset-0 bg-black/5 z-20 pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-black/80 to-transparent p-6 pt-24 text-white">
                     <div className="flex items-center gap-4">
                         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#078DA4] to-[#066F82]">
                             <Leaf size={24} className="text-white" />
