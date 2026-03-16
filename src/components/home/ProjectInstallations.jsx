@@ -14,7 +14,9 @@ export function ProjectInstallations() {
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
                     <Reveal key={project.slug} className={`${cardBase} p-4`}>
-                        <SafeImage src={project.image} alt={project.name} className="h-44 w-full rounded-xl border border-[#DCE3E6] object-cover" />
+                        <div className="h-44 w-full overflow-hidden rounded-xl border border-[#DCE3E6]">
+                            <SafeImage src={project.image} alt={project.name} className="h-full w-full object-cover" />
+                        </div>
                         <h3 className="mt-3 text-lg font-semibold text-[#354653]">{project.name}</h3>
                         <p className="mt-1 text-sm text-[#5B707E]">{project.industry} - {project.location}</p>
                         <p className="mt-1 text-sm text-[#5B707E]">Burner Capacity: {project.capacity}</p>
