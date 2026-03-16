@@ -48,8 +48,8 @@ export default function GalleryPage() {
                             onClick={() => setSelected(item)}
                             className={`${cardBase} group overflow-hidden p-0 text-left`}
                         >
-                            <div className="overflow-hidden">
-                                <SafeImage src={item.image} alt={item.title} className="h-56 w-full object-cover transition duration-500 group-hover:scale-110" />
+                            <div className="overflow-hidden h-56 w-full">
+                                <SafeImage src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
                             </div>
                             <p className="px-4 py-3 text-sm font-medium text-[#354653]">{item.title}</p>
                         </button>
