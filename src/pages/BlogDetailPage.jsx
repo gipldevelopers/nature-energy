@@ -19,7 +19,13 @@ export default function BlogDetailPage() {
 
     return (
         <main className="pb-8">
-            <PageHero label="Blog Detail" title={blog.title} subtitle={blog.excerpt} image={blog.image} />
+            <PageHero 
+                label="Blog Detail" 
+                title={blog.title} 
+                subtitle={blog.excerpt} 
+                image={blog.image} 
+                video={blog.video}
+            />
 
             <div className="mx-auto mt-6 w-[min(1280px,94vw)]">
                 <Link
