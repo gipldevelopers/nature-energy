@@ -1,26 +1,26 @@
 // ── Core product / hero images (your original high-quality PNGs) ──
-import heroBg        from '../assets/images/hero_bg.png';
-import burnerMain    from '../assets/images/burner_main.png';
-import boilerRoom    from '../assets/images/boiler_room.png';
-import machine1      from '../assets/images/machine_1.png';
-import pellets       from '../assets/images/pellets.png';
+import heroBg from '../assets/images/hero_bg.png';
+import burnerMain from '../assets/images/burner_main.png';
+import boilerRoom from '../assets/images/boiler_room.png';
+import machine1 from '../assets/images/machine_1.png';
+import pellets from '../assets/images/pellets.png';
 import ctaConsultation from '../assets/images/cta_consultation.png';
 
 // ── All original images from the public folder ──
-import heroBgOrig      from '../assets/images/hero_bg.jpg';        // Hero background original
-import burnerMainOrig  from '../assets/images/burner_main.jpg';    // Burner unit close-up
-import boilerRoomOrig  from '../assets/images/boiler_room.jpg';    // Boiler room interior
-import machine1Orig    from '../assets/images/machine_1.jpg';      // Machine fabrication bay
-import ctaOrig         from '../assets/images/cta_consultation.jpg'; // Consultation scene
-import riceHusk        from '../assets/images/rice_husk.jpg';      // Biomass / rice husk pellets
-import factoryHallImg  from '../assets/images/factory_hall.jpg';   // Factory hall wide view
-import furnaceLineImg  from '../assets/images/furnace_line.jpg';   // Furnace line / industrial heating
-import installSiteImg  from '../assets/images/install_site.jpg';   // Installation / commissioning site
-import textileImg      from '../assets/images/textile.jpg';        // Textile manufacturing line
-import controlRoomImg  from '../assets/images/control_room.jpg';   // Control room / automation panel
-import foodLineImg     from '../assets/images/food_line.jpg';      // Food processing heating line
-import imagesImg       from '../assets/images/images.jpg';         // Additional industrial view
-import pelletStorage   from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
+import heroBgOrig from '../assets/images/hero_bg.jpg';        // Hero background original
+import burnerMainOrig from '../assets/images/burner_main.jpg';    // Burner unit close-up
+import boilerRoomOrig from '../assets/images/boiler_room.jpg';    // Boiler room interior
+import machine1Orig from '../assets/images/machine_1.jpg';      // Machine fabrication bay
+import ctaOrig from '../assets/images/cta_consultation.jpg'; // Consultation scene
+import riceHusk from '../assets/images/rice_husk.jpg';      // Biomass / rice husk pellets
+import factoryHallImg from '../assets/images/factory_hall.jpg';   // Factory hall wide view
+import furnaceLineImg from '../assets/images/furnace_line.jpg';   // Furnace line / industrial heating
+import installSiteImg from '../assets/images/install_site.jpg';   // Installation / commissioning site
+import textileImg from '../assets/images/textile.jpg';        // Textile manufacturing line
+import controlRoomImg from '../assets/images/control_room.jpg';   // Control room / automation panel
+import foodLineImg from '../assets/images/food_line.jpg';      // Food processing heating line
+import imagesImg from '../assets/images/images.jpg';         // Additional industrial view
+import pelletStorage from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
 
 // ── Updated Images/Videos from New Folder ──
 import updatedImg1 from '../assets/updated image-videos/1.jpeg';
@@ -29,67 +29,67 @@ import burnerBoilerClean from '../assets/images/burner_boiler_clean.png';
 import burnerFactoryClean from '../assets/images/burner_factory_clean.png';
 import burnerControlClean from '../assets/images/burner_control_clean.png';
 
-import vid3 from '../assets/updated image-videos/3.mp4';
-import vid9 from '../assets/updated image-videos/9.mp4';
-import vid7 from '../assets/updated image-videos/7.mp4';
-import vid10 from '../assets/updated image-videos/10.mp4';
-import vid4 from '../assets/updated image-videos/4.mp4';
-import vid5 from '../assets/updated image-videos/5.mp4';
-import vid6 from '../assets/updated image-videos/6.mp4';
+const vid3 = 'http://localhost/cdn-files/uploads/videos/69b7da2725306.mp4';
+const vid9 = 'http://localhost/cdn-files/uploads/videos/69b7dccb48f94.mp4';
+const vid7 = 'http://localhost/cdn-files/uploads/videos/69b7dce67debe.mp4';
+const vid10 = 'http://localhost/cdn-files/uploads/videos/69b7dcfde3013.mp4';
+const vid4 = 'http://localhost/cdn-files/uploads/videos/69b7dca02996f.mp4';
+const vid5 = 'http://localhost/cdn-files/uploads/videos/69b7dd165e832.mp4';
+const vid6 = 'http://localhost/cdn-files/uploads/videos/69b7dd4a45a26.mp4';
 
 // Keep some originals for CTA/Hero transitions if needed
-import vid13 from '../assets/media/vid13.mp4';
-import vid14 from '../assets/media/vid14.mp4';
-import vid17 from '../assets/media/vid17.mp4';
-import vid16 from '../assets/media/vid16.mp4';
+const vid13 = 'http://localhost/cdn-files/uploads/videos/69b7dd7a2970e.mp4';
+const vid14 = 'http://localhost/cdn-files/uploads/videos/69b7dd9a11eea.mp4';
+const vid17 = 'http://localhost/cdn-files/uploads/videos/69b7ddb37e84b.mp4';
+const vid16 = 'http://localhost/cdn-files/uploads/videos/69b7ddc58e8f9.mp4';
 
-import aboutVid from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.42.17 PM.mp4';
-import projectVid1 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.21.25 PM.mp4';
-import projectVid2 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.22.42 PM.mp4';
-import projectVid3 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.22.24 PM.mp4';
+const aboutVid ='http://localhost/cdn-files/uploads/videos/69b7de058c601.mp4';
+const projectVid1 = 'http://localhost/cdn-files/uploads/videos/69b7de661e5fd.mp4';
+const projectVid2 = 'http://localhost/cdn-files/uploads/videos/69b7de8294e1b.mp4';
+const projectVid3 = 'http://localhost/cdn-files/uploads/videos/69b7de9b750be.mp4';
 
 export const aboutAssets = {
   aboutCompanyVid: aboutVid
 };
 
 export const blogAssets = {
-    vid4,
-    vid5,
-    vid6,
-    vid13,
-    vid14,
-    vid17,
-    vid16
+  vid4,
+  vid5,
+  vid6,
+  vid13,
+  vid14,
+  vid17,
+  vid16
 };
 
 export const imageSet = {
   // Core (PNG – used in hero & product cards)
   heroBg,
   burnerMain,
-  boilerRoom:   burnerBoilerClean, // Using clean edited version
+  boilerRoom: burnerBoilerClean, // Using clean edited version
   machine1,
   pellets,
   ctaConsultation,
 
   // Extended – Unique assignments for EVERY section (No Repeats)
-  factoryHall:  burnerFactoryClean, // Manufacturing context
-  furnaceLine:  burnerWorkshopClean, // Technology context
-  automation:   burnerControlClean, // Automation context
-  steelPlant:   burnerFactoryClean, // Industrial context
-  installSite:  updatedImg1,        // Installation context (REAL photo)
-  boilerPlant:  burnerWorkshopClean, // Boiler context 1
-  textile:      burnerFactoryClean, // Textile context
-  foodLine:     burnerBoilerClean,  // Food context
-  controlRoom:  burnerControlClean, // Control context
+  factoryHall: burnerFactoryClean, // Manufacturing context
+  furnaceLine: burnerWorkshopClean, // Technology context
+  automation: burnerControlClean, // Automation context
+  steelPlant: burnerFactoryClean, // Industrial context
+  installSite: updatedImg1,        // Installation context (REAL photo)
+  boilerPlant: burnerWorkshopClean, // Boiler context 1
+  textile: burnerFactoryClean, // Textile context
+  foodLine: burnerBoilerClean,  // Food context
+  controlRoom: burnerControlClean, // Control context
   boilerRoomIdx: burnerBoilerClean, // Boiler context 2 (Different variant)
 
   // Additional unique images available for gallery & sections
-  riceHusk:     pellets,             // Focus on fuel
+  riceHusk: pellets,             // Focus on fuel
   pelletStorage: updatedImg1,        // Real storage view
-  industrialView: burnerFactoryClean, 
-  burnerOrig:   burnerWorkshopClean, 
+  industrialView: burnerFactoryClean,
+  burnerOrig: burnerWorkshopClean,
   machine1Orig: updatedImg1,      // REAL real photo for variety
-  ctaOrig:      burnerWorkshopClean, 
+  ctaOrig: burnerWorkshopClean,
 };
 
 export const navItems = [
@@ -439,7 +439,7 @@ export const projects = [
     slug: 'surat-textile-retrofit',
     name: 'Textile Dryer Retrofit Program',
     image: burnerFactoryClean, // Unique clean version
-    video: projectVid1, 
+    video: projectVid1,
     location: 'Surat, Gujarat',
     industry: 'Textile Manufacturing',
     capacity: '1,200,000 kcal/hr',
@@ -580,13 +580,13 @@ export const blogs = [
 ];
 
 export const galleryImages = [
-  { id: 1,  category: 'manufacturing', title: 'Machine Fabrication Bay',         image: burnerFactoryClean },
-  { id: 2,  category: 'installation',  title: 'On-Site Burner Installation',      image: updatedImg1 },
-  { id: 3,  category: 'application',   title: 'Boiler Room Operation',             image: burnerBoilerClean },
-  { id: 4,  category: 'machine',       title: 'Industrial Pellet Burner Unit',    image: burnerWorkshopClean },
-  { id: 5,  category: 'technology',    title: 'Combustion Control Panel',         image: burnerControlClean },
-  { id: 6,  category: 'machine',       title: 'Burner Unit – PNG View',           image: burnerMain },
-  { id: 7,  category: 'fuel',          title: 'Premium Biomass Pellets',          image: pellets },
+  { id: 1, category: 'manufacturing', title: 'Machine Fabrication Bay', image: burnerFactoryClean },
+  { id: 2, category: 'installation', title: 'On-Site Burner Installation', image: updatedImg1 },
+  { id: 3, category: 'application', title: 'Boiler Room Operation', image: burnerBoilerClean },
+  { id: 4, category: 'machine', title: 'Industrial Pellet Burner Unit', image: burnerWorkshopClean },
+  { id: 5, category: 'technology', title: 'Combustion Control Panel', image: burnerControlClean },
+  { id: 6, category: 'machine', title: 'Burner Unit – PNG View', image: burnerMain },
+  { id: 7, category: 'fuel', title: 'Premium Biomass Pellets', image: pellets },
 ];
 
 export const faqGroups = [
