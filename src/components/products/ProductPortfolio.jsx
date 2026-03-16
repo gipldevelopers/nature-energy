@@ -19,11 +19,11 @@ export function ProductPortfolio() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map((product) => (
                     <Reveal key={product.slug} className="group relative flex flex-col rounded-[20px] border border-[#DCE3E6] bg-white p-3 transition-all duration-300 hover:shadow-lg hover:shadow-[#066F82]/5">
-                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[14px] border border-[#DCE3E6]/30 bg-[#F8FAFB] flex items-center justify-center">
+                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[14px] border border-[#DCE3E6]/30">
                             {product.video ? (
                                 <video
                                     src={product.video}
-                                    className="h-full w-full object-contain"
+                                    className="h-full w-full object-cover"
                                     autoPlay
                                     muted
                                     loop
