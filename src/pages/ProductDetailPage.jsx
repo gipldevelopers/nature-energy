@@ -106,7 +106,9 @@ export default function ProductDetailPage() {
                                 </button>
                             </div>
                         ) : (
-                            <SafeImage src={product.image} alt={product.name} className="h-72 w-full object-cover" />
+                            <div className="h-72 w-full overflow-hidden">
+                                <SafeImage src={product.image} alt={product.name} className="h-full w-full object-cover" />
+                            </div>
                         )}
                     </div>
                     <div className="p-6 bg-white border-t border-[#DCE3E6]">
@@ -195,11 +197,13 @@ export default function ProductDetailPage() {
                 <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
                     {gallery.map((img, index) => (
                         <Reveal key={`${img}-${index}`}>
-                            <SafeImage
-                                src={img}
-                                alt={`${product.name} gallery ${index + 1}`}
-                                className="h-36 w-full rounded-xl border border-[#DCE3E6] object-cover transition duration-300 hover:scale-[1.03]"
-                            />
+                            <div className="h-36 w-full rounded-xl border border-[#DCE3E6] overflow-hidden">
+                                <SafeImage
+                                    src={img}
+                                    alt={`${product.name} gallery ${index + 1}`}
+                                    className="h-full w-full object-cover transition duration-300 hover:scale-[1.03]"
+                                />
+                            </div>
                         </Reveal>
                     ))}
                 </div>
