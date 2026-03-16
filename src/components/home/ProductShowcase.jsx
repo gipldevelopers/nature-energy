@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ChevronRight, Play, Pause } from 'lucide-react';
@@ -11,6 +11,20 @@ export function ProductShowcase() {
     const [active, setActive] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const current = products[active];
+    const mainVideoRef = useRef(null);
+    const bgVideoRef = useRef(null);
+
+    // Sync video playback with isPaused state
+    useEffect(() => {
+        if (mainVideoRef.current) {
+            if (isPaused) mainVideoRef.current.pause();
+            else mainVideoRef.current.play().catch(() => {});
+        }
+        if (bgVideoRef.current) {
+            if (isPaused) bgVideoRef.current.pause();
+            else bgVideoRef.current.play().catch(() => {});
+        }
+    }, [isPaused, active]);
 
     // Auto-scroll logic
     useEffect(() => {
@@ -20,7 +34,7 @@ export function ProductShowcase() {
             setActive((prev) => (prev + 1) % products.length);
         }, 6000);
         return () => clearInterval(interval);
-    }, [isPaused]);
+    }, [isPaused, active]);
 
     return (
         <section className="mx-auto mt-6 w-[min(1280px,94vw)] overflow-hidden rounded-[24px] border border-[#DCE3E6]">
@@ -110,11 +124,11 @@ export function ProductShowcase() {
                             transition={{ duration: 0.4, ease: 'easeInOut' }}
                             className="flex flex-col md:flex-row md:min-h-[440px]"
                         >
-                            {/* Image section — dark bg */}
-                            <div className="relative md:w-[46%] overflow-hidden bg-[#1e2d38] flex items-center justify-center">
-                                {/* Grid texture */}
+                            {/* Image section — pure black bg */}
+                            <div className="relative md:w-[46%] overflow-hidden bg-[#000000] flex items-center justify-center">
+                                {/* Grid texture (Reduced opacity for deeper black) */}
                                 <div
-                                    className="pointer-events-none absolute inset-0 opacity-[0.07] z-20"
+                                    className="pointer-events-none absolute inset-0 opacity-[0.03] z-20"
                                     style={{
                                         backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)',
                                         backgroundSize: '32px 32px',
@@ -123,11 +137,12 @@ export function ProductShowcase() {
 
                                 {/* Product image/video - used object-cover to fill container and remove black space */}
                                 {current.video ? (
-                                    <div key={current.video} className="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-full bg-[#0a1118] flex items-center justify-center">
-                                        {/* Dynamic blurred background to perfectly fill any remaining space */}
+                                    <div key={current.video} className="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-full bg-[#000000] flex items-center justify-center">
+                                        {/* Dynamic blurred background (Lower opacity to maintain black depth) */}
                                         <video
+                                            ref={bgVideoRef}
                                             src={current.video}
-                                            className="absolute inset-0 h-full w-full object-cover blur-3xl opacity-50 scale-125"
+                                            className="absolute inset-0 h-full w-full object-cover blur-3xl opacity-20 scale-125"
                                             autoPlay
                                             muted
                                             loop
@@ -136,6 +151,7 @@ export function ProductShowcase() {
                                         />
                                         {/* Main video - set to object-contain so the FULL frame is visible without cropping */}
                                         <video
+                                            ref={mainVideoRef}
                                             src={current.video}
                                             className="relative z-10 h-full w-full object-contain drop-shadow-2xl"
                                             autoPlay
