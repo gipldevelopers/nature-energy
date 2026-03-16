@@ -162,8 +162,8 @@ export function Navbar() {
                                                 <button
                                                     onClick={() => setMobileExpanded(mobileExpanded === item.path ? null : item.path)}
                                                     className={`flex h-12 w-12 items-center justify-center rounded-xl border transition-all ${mobileExpanded === item.path
-                                                            ? 'border-[#078DA4] bg-[#078DA4] text-white'
-                                                            : 'border-[#DCE3E6] text-[#5B707E]'
+                                                        ? 'border-[#078DA4] bg-[#078DA4] text-white'
+                                                        : 'border-[#DCE3E6] text-[#5B707E]'
                                                         }`}
                                                 >
                                                     <ChevronDown size={18} className={`transition-transform duration-300 ${mobileExpanded === item.path ? 'rotate-180' : ''}`} />
@@ -205,12 +205,14 @@ export function Navbar() {
                                 );
                             })}
                         </div>
-                        <Link
-                            to="/contact"
-                            className="mt-5 inline-flex w-full justify-center rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-3 text-sm font-semibold text-[#FDFEFD]"
-                        >
-                            Get Quote
-                        </Link>
+                        {location.pathname === '/' && (
+                            <Link
+                                to="/contact"
+                                className="mt-5 inline-flex w-full justify-center rounded-full border border-[#078DA4] bg-gradient-to-r from-[#078DA4] to-[#066F82] px-5 py-3 text-sm font-semibold text-[#FDFEFD]"
+                            >
+                                Get Quote
+                            </Link>
+                        )}
                     </Motion.div>
                 )}
             </AnimatePresence>
