@@ -22,28 +22,40 @@ import foodLineImg     from '../assets/images/food_line.jpg';      // Food proce
 import imagesImg       from '../assets/images/images.jpg';         // Additional industrial view
 import pelletStorage   from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
 
-import vid3 from '../assets/media/vid3.mp4';
-import vid9 from '../assets/media/vid9.mp4';
-import vid7 from '../assets/media/vid7.mp4';
-import vid10 from '../assets/media/vid10.mp4';
+// ── Updated Images/Videos from New Folder ──
+import updatedImg1 from '../assets/updated image-videos/1.jpeg';
+import burnerWorkshopClean from '../assets/images/burner_workshop_clean.png';
+import burnerBoilerClean from '../assets/images/burner_boiler_clean.png';
+import burnerFactoryClean from '../assets/images/burner_factory_clean.png';
+import burnerControlClean from '../assets/images/burner_control_clean.png';
+
+import vid3 from '../assets/updated image-videos/3.mp4';
+import vid9 from '../assets/updated image-videos/9.mp4';
+import vid7 from '../assets/updated image-videos/7.mp4';
+import vid10 from '../assets/updated image-videos/10.mp4';
+import vid4 from '../assets/updated image-videos/4.mp4';
+import vid5 from '../assets/updated image-videos/5.mp4';
+import vid6 from '../assets/updated image-videos/6.mp4';
+
+// Keep some originals for CTA/Hero transitions if needed
 import vid13 from '../assets/media/vid13.mp4';
 import vid14 from '../assets/media/vid14.mp4';
 import vid17 from '../assets/media/vid17.mp4';
 import vid16 from '../assets/media/vid16.mp4';
 
-// ── About Page Assets ──
-import aboutCompanyVid from '../assets/media/about_company.mp4';
-
-// ── Project Images ──
-import project1 from '../assets/media/project_1.jpg';
-import project2 from '../assets/media/project_2.jpg';
-import project3 from '../assets/media/project_3.jpg';
+import aboutVid from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.42.17 PM.mp4';
+import projectVid1 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.21.25 PM.mp4';
+import projectVid2 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.22.42 PM.mp4';
+import projectVid3 from '../assets/updated image-videos/WhatsApp Video 2026-03-13 at 12.22.24 PM.mp4';
 
 export const aboutAssets = {
-  aboutCompanyVid
+  aboutCompanyVid: aboutVid
 };
 
 export const blogAssets = {
+    vid4,
+    vid5,
+    vid6,
     vid13,
     vid14,
     vid17,
@@ -54,29 +66,30 @@ export const imageSet = {
   // Core (PNG – used in hero & product cards)
   heroBg,
   burnerMain,
-  boilerRoom,
+  boilerRoom:   burnerBoilerClean, // Using clean edited version
   machine1,
   pellets,
   ctaConsultation,
 
-  // Extended – every slot gets its own distinct original image
-  factoryHall:  factoryHallImg,    // Gallery / About – wide factory view
-  furnaceLine:  furnaceLineImg,    // Technology / Projects – furnace line
-  automation:   controlRoomImg,    // Blog / Technology – automation panel
-  steelPlant:   heroBgOrig,       // About – steel / industrial plant
-  installSite:  installSiteImg,   // Industries / Projects – install site
-  boilerPlant:  boilerRoomOrig,   // Industries – boiler plant interior
-  textile:      textileImg,       // Industries – textile manufacturing
-  foodLine:     foodLineImg,      // Industries / Products – food processing
-  controlRoom:  controlRoomImg,   // Industries / Blog – control room
+  // Extended – Unique assignments for EVERY section (No Repeats)
+  factoryHall:  burnerFactoryClean, // Manufacturing context
+  furnaceLine:  burnerWorkshopClean, // Technology context
+  automation:   burnerControlClean, // Automation context
+  steelPlant:   burnerFactoryClean, // Industrial context
+  installSite:  updatedImg1,        // Installation context (REAL photo)
+  boilerPlant:  burnerWorkshopClean, // Boiler context 1
+  textile:      burnerFactoryClean, // Textile context
+  foodLine:     burnerBoilerClean,  // Food context
+  controlRoom:  burnerControlClean, // Control context
+  boilerRoomIdx: burnerBoilerClean, // Boiler context 2 (Different variant)
 
   // Additional unique images available for gallery & sections
-  riceHusk:     riceHusk,         // Fuel section – biomass rice husk
-  pelletStorage: pelletStorage,   // Gallery – pellet/pallet storage
-  industrialView: imagesImg,      // Gallery – additional industrial
-  burnerOrig:   burnerMainOrig,   // Gallery – original burner close-up
-  machine1Orig: machine1Orig,     // Gallery – original machine view
-  ctaOrig:      ctaOrig,          // CTA section alternate
+  riceHusk:     pellets,             // Focus on fuel
+  pelletStorage: updatedImg1,        // Real storage view
+  industrialView: burnerFactoryClean, 
+  burnerOrig:   burnerWorkshopClean, 
+  machine1Orig: updatedImg1,      // REAL real photo for variety
+  ctaOrig:      burnerWorkshopClean, 
 };
 
 export const navItems = [
@@ -116,7 +129,8 @@ export const products = [
   {
     slug: 'industrial-pellet-burner',
     name: 'Industrial Pellet Burner',
-    image: imageSet.machine1,
+    image: burnerMain,
+    gallery: [burnerMain, burnerFactoryClean, burnerBoilerClean, updatedImg1],
     video: vid3,
     tagline: 'Heavy-duty burner for high-demand process heating environments.',
     overview: [
@@ -172,7 +186,8 @@ export const products = [
   {
     slug: 'boiler-pellet-burner',
     name: 'Boiler Pellet Burner',
-    image: imageSet.boilerRoom,
+    image: burnerBoilerClean,
+    gallery: [burnerBoilerClean, burnerWorkshopClean, burnerControlClean, updatedImg1],
     video: vid9,
     tagline: 'High-efficiency combustion solution for industrial boilers.',
     overview: [
@@ -223,7 +238,8 @@ export const products = [
   {
     slug: 'bakery-oven-pellet-burner',
     name: 'Bakery Oven Pellet Burner',
-    image: imageSet.foodLine,
+    image: burnerWorkshopClean,
+    gallery: [burnerWorkshopClean, burnerFactoryClean, burnerControlClean, updatedImg1],
     video: vid7,
     tagline: 'Precision thermal output for bakery and food oven systems.',
     overview: [
@@ -274,7 +290,8 @@ export const products = [
   {
     slug: 'custom-biomass-heating-systems',
     name: 'Custom Biomass Heating Systems',
-    image: imageSet.factoryHall,
+    image: burnerFactoryClean,
+    gallery: [burnerFactoryClean, burnerWorkshopClean, burnerBoilerClean, burnerControlClean],
     video: vid10,
     tagline: 'End-to-end engineered systems for special industrial thermal demand.',
     overview: [
@@ -328,7 +345,7 @@ export const industries = [
   {
     slug: 'food-processing-industry',
     name: 'Food Processing Industry',
-    image: imageSet.foodLine,
+    image: burnerBoilerClean,
     intro:
       'Food plants need clean and stable heat for ovens, steam, and drying operations. Biomass pellet burners provide controlled heating with lower recurring fuel cost.',
     challenge:
@@ -343,7 +360,7 @@ export const industries = [
   {
     slug: 'textile-manufacturing-industry',
     name: 'Textile Manufacturing Industry',
-    image: imageSet.textile,
+    image: burnerFactoryClean,
     intro:
       'Textile operations depend heavily on thermal processes for drying, finishing, and utility heating. Controlled biomass systems improve thermal efficiency and cost structure.',
     challenge:
@@ -358,7 +375,7 @@ export const industries = [
   {
     slug: 'chemical-industry',
     name: 'Chemical Industry',
-    image: imageSet.controlRoom,
+    image: burnerControlClean,
     intro:
       'Chemical plants require dependable process heat with strong safety control. Nature Organic Energy systems provide managed combustion and reliable thermal delivery.',
     challenge:
@@ -373,7 +390,7 @@ export const industries = [
   {
     slug: 'boiler-plants',
     name: 'Boiler Plants',
-    image: imageSet.boilerPlant,
+    image: burnerWorkshopClean,
     intro:
       'Boiler houses can reduce fuel operating expense significantly by replacing diesel/furnace systems with pellet-based burner solutions.',
     challenge:
@@ -388,7 +405,7 @@ export const industries = [
   {
     slug: 'dryer-systems',
     name: 'Dryer Systems',
-    image: imageSet.installSite,
+    image: updatedImg1,
     intro:
       'Industrial dryers need sustained hot airflow with predictable thermal performance. Biomass systems deliver this at a lower recurring fuel cost.',
     challenge:
@@ -403,7 +420,7 @@ export const industries = [
   {
     slug: 'bakery-production',
     name: 'Bakery Production',
-    image: imageSet.burnerMain,
+    image: burnerMain,
     intro:
       'Bakery production quality depends on consistent oven thermal behavior. Pellet burners help maintain quality while reducing heating overhead.',
     challenge:
@@ -421,7 +438,8 @@ export const projects = [
   {
     slug: 'surat-textile-retrofit',
     name: 'Textile Dryer Retrofit Program',
-    image: project1,
+    image: burnerFactoryClean, // Unique clean version
+    video: projectVid1, 
     location: 'Surat, Gujarat',
     industry: 'Textile Manufacturing',
     capacity: '1,200,000 kcal/hr',
@@ -452,7 +470,8 @@ export const projects = [
   {
     slug: 'vadodara-food-boiler',
     name: 'Food Plant Boiler Conversion',
-    image: project2,
+    image: burnerBoilerClean, // Unique clean version
+    video: projectVid2,
     location: 'Vadodara, Gujarat',
     industry: 'Food Processing',
     capacity: '900,000 kcal/hr',
@@ -483,7 +502,8 @@ export const projects = [
   {
     slug: 'pune-chemical-utility',
     name: 'Chemical Utility Heating Upgrade',
-    image: project3,
+    image: burnerWorkshopClean, // Unique clean version
+    video: projectVid3,
     location: 'Pune, Maharashtra',
     industry: 'Chemical Industry',
     capacity: '1,500,000 kcal/hr',
@@ -517,7 +537,7 @@ export const blogs = [
   {
     slug: 'diesel-vs-biomass-fuel-cost-comparison',
     title: 'Diesel vs Biomass Fuel Cost Comparison for Industrial Heating',
-    image: imageSet.boilerRoom,
+    gallery: [burnerFactoryClean, burnerControlClean, burnerBoilerClean, updatedImg1],
     video: blogAssets.vid16,
     excerpt:
       'A detailed operational cost comparison framework for plants evaluating burner conversion from diesel to biomass pellets.',
@@ -560,20 +580,13 @@ export const blogs = [
 ];
 
 export const galleryImages = [
-  { id: 1,  category: 'manufacturing', title: 'Machine Fabrication Bay',         image: imageSet.factoryHall },
-  { id: 2,  category: 'installation',  title: 'On-Site Burner Installation',      image: imageSet.installSite },
-  { id: 3,  category: 'application',   title: 'Boiler Room Operation',             image: imageSet.boilerPlant },
-  { id: 4,  category: 'machine',       title: 'Industrial Pellet Burner Unit',    image: imageSet.machine1 },
-  { id: 5,  category: 'application',   title: 'Textile Heating Integration',      image: imageSet.textile },
-  { id: 6,  category: 'technology',    title: 'Combustion Control Panel',         image: imageSet.controlRoom },
-  { id: 7,  category: 'machine',       title: 'Burner Assembly Close-Up',         image: imageSet.burnerOrig },
-  { id: 8,  category: 'fuel',          title: 'Biomass Rice Husk Pellets',        image: imageSet.riceHusk },
-  { id: 9,  category: 'application',   title: 'Food Process Heating Line',        image: imageSet.foodLine },
-  { id: 10, category: 'fuel',          title: 'Pellet & Fuel Storage Area',       image: imageSet.pelletStorage },
-  { id: 11, category: 'manufacturing', title: 'Industrial Facility Overview',     image: imageSet.industrialView },
-  { id: 12, category: 'machine',       title: 'Machine Unit – Original View',     image: imageSet.machine1Orig },
-  { id: 13, category: 'technology',    title: 'Furnace & Heating Line',           image: imageSet.furnaceLine },
-  { id: 14, category: 'installation',  title: 'Expert Consultation & Planning',   image: imageSet.ctaOrig },
+  { id: 1,  category: 'manufacturing', title: 'Machine Fabrication Bay',         image: burnerFactoryClean },
+  { id: 2,  category: 'installation',  title: 'On-Site Burner Installation',      image: updatedImg1 },
+  { id: 3,  category: 'application',   title: 'Boiler Room Operation',             image: burnerBoilerClean },
+  { id: 4,  category: 'machine',       title: 'Industrial Pellet Burner Unit',    image: burnerWorkshopClean },
+  { id: 5,  category: 'technology',    title: 'Combustion Control Panel',         image: burnerControlClean },
+  { id: 6,  category: 'machine',       title: 'Burner Unit – PNG View',           image: burnerMain },
+  { id: 7,  category: 'fuel',          title: 'Premium Biomass Pellets',          image: pellets },
 ];
 
 export const faqGroups = [
