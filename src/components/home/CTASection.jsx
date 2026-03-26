@@ -3,7 +3,7 @@ import { Reveal } from '../common/Reveal';
 import { MagneticLink } from '../common/MagneticLink';
 import { SafeImage } from '../common/SafeImage';
 import { contactInfo } from '../../data/siteData';
-import ctaConsultation from '../../assets/images/cta_consultation.png';
+import ctaConsultation from '/cta_consultation.png';
 
 export function CTASection({
     label = "Call to Action Section",
