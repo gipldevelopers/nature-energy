@@ -28,6 +28,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import DealerPage from './pages/DealerPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
+import AdminPage from './pages/admin/AdminPage';
 
 import './App.css';
 
@@ -83,7 +84,12 @@ function AppShell() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppShell />
+      <Routes>
+        {/* Admin panel — completely outside the public site shell */}
+        <Route path="/admin/*" element={<AdminPage />} />
+        {/* Public site */}
+        <Route path="/*" element={<AppShell />} />
+      </Routes>
     </BrowserRouter>
   );
 }

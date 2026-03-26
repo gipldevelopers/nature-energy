@@ -1,10 +1,10 @@
 // ── Core product / hero images (your original high-quality PNGs) ──
-import heroBg from '../assets/images/hero_bg.png';
-import burnerMain from '../assets/images/burner_main.png';
-import boilerRoom from '../assets/images/boiler_room.png';
-import machine1 from '../assets/images/machine_1.png';
-import pellets from '../assets/images/pellets.png';
-import ctaConsultation from '../assets/images/cta_consultation.png';
+const heroBg = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e1fe308c4.png';
+const burnerMain = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e24ab8e2c.jpg';
+const boilerRoom = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e268c74d9.png';
+const machine1 = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e27f97b2a.jpg';
+const pellets = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e2978fb74.png';
+const ctaConsultation = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e2c3e2211.png';
 
 // ── All original images from the public folder ──
 import heroBgOrig from '../assets/images/hero_bg.jpg';        // Hero background original
@@ -23,30 +23,30 @@ import imagesImg from '../assets/images/images.jpg';         // Additional indus
 import pelletStorage from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
 
 // ── Updated Images/Videos from New Folder ──
-import updatedImg1 from '../assets/updated image-videos/1.jpeg';
-import burnerWorkshopClean from '../assets/images/burner_workshop_clean.png';
-import burnerBoilerClean from '../assets/images/burner_boiler_clean.png';
-import burnerFactoryClean from '../assets/images/burner_factory_clean.png';
-import burnerControlClean from '../assets/images/burner_control_clean.png';
+const updatedImg1 = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e0966f607.jpeg';
+const burnerWorkshopClean = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e0e9b4d46.png';
+const burnerBoilerClean = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e128e69dd.png';
+const burnerFactoryClean = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e18dadb22.png';
+const burnerControlClean = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e1b3eae09.png';
 
-const vid3 = 'http://localhost/cdn-files/uploads/videos/69b7da2725306.mp4';
-const vid9 = 'http://localhost/cdn-files/uploads/videos/69b7dccb48f94.mp4';
-const vid7 = 'http://localhost/cdn-files/uploads/videos/69b7dce67debe.mp4';
-const vid10 = 'http://localhost/cdn-files/uploads/videos/69b7dcfde3013.mp4';
-const vid4 = 'http://localhost/cdn-files/uploads/videos/69b7dca02996f.mp4';
-const vid5 = 'http://localhost/cdn-files/uploads/videos/69b7dd165e832.mp4';
-const vid6 = 'http://localhost/cdn-files/uploads/videos/69b7dd4a45a26.mp4';
+const vid3 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7da2725306.mp4';
+const vid9 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dccb48f94.mp4';
+const vid7 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dce67debe.mp4';
+const vid10 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dcfde3013.mp4';
+const vid4 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dca02996f.mp4';
+const vid5 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dd165e832.mp4';
+const vid6 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dd4a45a26.mp4';
 
 // Keep some originals for CTA/Hero transitions if needed
-const vid13 = 'http://localhost/cdn-files/uploads/videos/69b7dd7a2970e.mp4';
-const vid14 = 'http://localhost/cdn-files/uploads/videos/69b7dd9a11eea.mp4';
-const vid17 = 'http://localhost/cdn-files/uploads/videos/69b7ddb37e84b.mp4';
-const vid16 = 'http://localhost/cdn-files/uploads/videos/69b7ddc58e8f9.mp4';
+const vid13 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dd7a2970e.mp4';
+const vid14 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7dd9a11eea.mp4';
+const vid17 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7ddb37e84b.mp4';
+const vid16 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7ddc58e8f9.mp4';
 
-const aboutVid ='http://localhost/cdn-files/uploads/videos/69b7de058c601.mp4';
-const projectVid1 = 'http://localhost/cdn-files/uploads/videos/69b7de661e5fd.mp4';
-const projectVid2 = 'http://localhost/cdn-files/uploads/videos/69b7de8294e1b.mp4';
-const projectVid3 = 'http://localhost/cdn-files/uploads/videos/69b7de9b750be.mp4';
+const aboutVid = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7de058c601.mp4';
+const projectVid1 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7de661e5fd.mp4';
+const projectVid2 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7de8294e1b.mp4';
+const projectVid3 = 'http://localhost/nature-energy/cdn-files/uploads/videos/69b7de9b750be.mp4';
 
 export const aboutAssets = {
   aboutCompanyVid: aboutVid

@@ -12,25 +12,40 @@ export function LeadFormMap() {
         product: 'Industrial Pellet Burner',
         message: ''
     });
-    const [status, setStatus] = useState('idle'); // idle, sending, success
+    const [status, setStatus] = useState('idle'); // idle, sending, success, error
+    const [errorMsg, setErrorMsg] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-        
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({
-                name: '',
-                company: '',
-                phone: '',
-                email: '',
-                product: 'Industrial Pellet Burner',
-                message: ''
+        setErrorMsg('');
+
+        try {
+            const response = await fetch('http://localhost/nature-energy/backend/contact.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
-            setTimeout(() => setStatus('idle'), 5000);
-        }, 1500);
+            const result = await response.json();
+            if (result.success) {
+                setStatus('success');
+                setFormData({
+                    name: '',
+                    company: '',
+                    phone: '',
+                    email: '',
+                    product: 'Industrial Pellet Burner',
+                    message: ''
+                });
+                setTimeout(() => setStatus('idle'), 6000);
+            } else {
+                setErrorMsg(result.message || 'Something went wrong. Please try again.');
+                setStatus('error');
+            }
+        } catch (err) {
+            setErrorMsg('Network error. Please check your connection and try again.');
+            setStatus('error');
+        }
     };
 
     const handleChange = (e) => {
@@ -134,12 +149,17 @@ export function LeadFormMap() {
                                 placeholder="Tell us about any specific temperature requirements or space constraints..." 
                             />
                         </label>
+                        {status === 'error' && (
+                            <div className="md:col-span-2 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700 flex items-center gap-2">
+                                <span>⚠️</span> {errorMsg}
+                            </div>
+                        )}
                         <button 
                             type="submit" 
                             disabled={status === 'sending'}
                             className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#078DA4] to-[#066F82] px-6 py-4 text-sm font-bold text-[#FDFEFD] md:col-span-2 hover:opacity-90 transition-opacity disabled:opacity-70"
                         >
-                            {status === 'sending' ? 'Sending...' : 'Send'} <ArrowRight size={16} />
+                            {status === 'sending' ? 'Sending...' : 'Send Inquiry'} <ArrowRight size={16} />
                         </button>
                     </form>
                 )}

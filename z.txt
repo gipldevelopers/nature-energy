@@ -1,0 +1,3 @@
+http://localhost:5173/contact
+
+make backend for this contact form. please create backend in php api and database with also need to connect for now localhost also create config file from that all control also add php mailer for mail sending. and also create admin panel for view and manage all contact and login admin panel in react crerate /admin nd secure with login id password. all with php backend in backned folder
