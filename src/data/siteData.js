@@ -6,21 +6,7 @@ const machine1 = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e2
 const pellets = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e2978fb74.png';
 const ctaConsultation = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e2c3e2211.png';
 
-// ── All original images from the public folder ──
-import heroBgOrig from '../assets/images/hero_bg.jpg';        // Hero background original
-import burnerMainOrig from '../assets/images/burner_main.jpg';    // Burner unit close-up
-import boilerRoomOrig from '../assets/images/boiler_room.jpg';    // Boiler room interior
-import machine1Orig from '../assets/images/machine_1.jpg';      // Machine fabrication bay
-import ctaOrig from '../assets/images/cta_consultation.jpg'; // Consultation scene
-import riceHusk from '../assets/images/rice_husk.jpg';      // Biomass / rice husk pellets
-import factoryHallImg from '../assets/images/factory_hall.jpg';   // Factory hall wide view
-import furnaceLineImg from '../assets/images/furnace_line.jpg';   // Furnace line / industrial heating
-import installSiteImg from '../assets/images/install_site.jpg';   // Installation / commissioning site
-import textileImg from '../assets/images/textile.jpg';        // Textile manufacturing line
-import controlRoomImg from '../assets/images/control_room.jpg';   // Control room / automation panel
-import foodLineImg from '../assets/images/food_line.jpg';      // Food processing heating line
-import imagesImg from '../assets/images/images.jpg';         // Additional industrial view
-import pelletStorage from '../assets/images/pellet_storage.jpg'; // Pellet / pallet storage
+
 
 // ── Updated Images/Videos from New Folder ──
 const updatedImg1 = 'http://localhost/nature-energy/cdn-files/uploads/images/69b7e0966f607.jpeg';
@@ -643,5 +629,44 @@ export const processSteps = [
   { title: 'Machine Assembly', detail: 'System integration of burner, feeder, panel, and controls.' },
   { title: 'Quality Testing', detail: 'Load testing, safety checks, and performance validation.' },
   { title: 'Installation', detail: 'Site deployment, commissioning, and operational handover.' },
+];
+
+export const industrialApplicationsImages = [
+  {
+    id: 1,
+    title: 'Pellet Burner with Bakery Oven',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.01.jpeg',
+    desc: 'High-performance pellet burner optimized for continuous bakery oven operations, ensuring precise temperature control and fuel savings.'
+  },
+  {
+    id: 2,
+    title: 'Pellet Burner with Sand Dryer',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.02.jpeg',
+    desc: 'Heavy-duty pellet burner integrated with sand drying systems, delivering robust and consistent heat for industrial material processing.'
+  },
+  {
+    id: 3,
+    title: 'Pellet Burner with Heat Exchanger',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.03.jpeg',
+    desc: 'Efficient combination of pellet burner and heat exchanger designed for maximum thermal transfer and minimal energy loss.'
+  },
+  {
+    id: 4,
+    title: 'Pellet Burner with Steam Boiler',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.04.jpeg',
+    desc: 'Reliable pellet burner configured for steam boiler operation, providing steady steam generation with significantly reduced fuel costs.'
+  },
+  {
+    id: 5,
+    title: 'Pellet Burner with Roaster',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.05.jpeg',
+    desc: 'Precision heating solution for industrial roasters, ensuring uniform heat distribution for optimal product quality.'
+  },
+  {
+    id: 6,
+    title: 'Pellet Burner in Shutter Kiln',
+    image: 'http://localhost/nature-energy/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.07.jpeg',
+    desc: 'Powerful pellet burner implementation in shutter kilns, engineered for high-temperature demands and long continuous operational cycles.'
+  }
 ];
 

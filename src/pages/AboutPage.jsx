@@ -9,6 +9,7 @@ import { QualityAssurance } from '../components/about/QualityAssurance';
 import { ResearchAndDevelopment } from '../components/about/ResearchAndDevelopment';
 import { Decarbonisation } from '../components/about/Decarbonisation';
 import { ClientSuccess } from '../components/about/ClientSuccess';
+import { IndustrialApplications } from '../components/about/IndustrialApplications';
 import { imageSet } from '../data/siteData';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -35,6 +36,7 @@ export default function AboutPage() {
             <ResearchAndDevelopment />
             <Decarbonisation />
             <ClientSuccess />
+            <IndustrialApplications />
 
             <CTASection
                 label="About Our Company"
