@@ -1,38 +1,41 @@
 // ── Core product / hero images (your original high-quality PNGs) ──
-const heroBg = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e1fe308c4.png';
-const burnerMain = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e24ab8e2c.jpg';
-const boilerRoom = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e268c74d9.png';
-const machine1 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e27f97b2a.jpg';
-const pellets = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e2978fb74.png';
-const ctaConsultation = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e2c3e2211.png';
+const CDN_BASE_URL = (import.meta.env.VITE_CDN_BASE_URL || 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files').replace(/\/$/, '');
+const cdnAsset = (path) => `${CDN_BASE_URL}${path}`;
+
+const heroBg = cdnAsset('/uploads/images/69b7e1fe308c4.png');
+const burnerMain = cdnAsset('/uploads/images/69b7e24ab8e2c.jpg');
+const boilerRoom = cdnAsset('/uploads/images/69b7e268c74d9.png');
+const machine1 = cdnAsset('/uploads/images/69b7e27f97b2a.jpg');
+const pellets = cdnAsset('/uploads/images/69b7e2978fb74.png');
+const ctaConsultation = cdnAsset('/uploads/images/69b7e2c3e2211.png');
 
 
 
 // ── Updated Images/Videos from New Folder ──
-const updatedImg1 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e0966f607.jpeg';
-const burnerWorkshopClean = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e0e9b4d46.png';
-const burnerBoilerClean = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e128e69dd.png';
-const burnerFactoryClean = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e18dadb22.png';
-const burnerControlClean = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/69b7e1b3eae09.png';
+const updatedImg1 = cdnAsset('/uploads/images/69b7e0966f607.jpeg');
+const burnerWorkshopClean = cdnAsset('/uploads/images/69b7e0e9b4d46.png');
+const burnerBoilerClean = cdnAsset('/uploads/images/69b7e128e69dd.png');
+const burnerFactoryClean = cdnAsset('/uploads/images/69b7e18dadb22.png');
+const burnerControlClean = cdnAsset('/uploads/images/69b7e1b3eae09.png');
 
-const vid3 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7da2725306.mp4';
-const vid9 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dccb48f94.mp4';
-const vid7 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dce67debe.mp4';
-const vid10 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dcfde3013.mp4';
-const vid4 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dca02996f.mp4';
-const vid5 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dd165e832.mp4';
-const vid6 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dd4a45a26.mp4';
+const vid3 = cdnAsset('/uploads/videos/69b7da2725306.mp4');
+const vid9 = cdnAsset('/uploads/videos/69b7dccb48f94.mp4');
+const vid7 = cdnAsset('/uploads/videos/69b7dce67debe.mp4');
+const vid10 = cdnAsset('/uploads/videos/69b7dcfde3013.mp4');
+const vid4 = cdnAsset('/uploads/videos/69b7dca02996f.mp4');
+const vid5 = cdnAsset('/uploads/videos/69b7dd165e832.mp4');
+const vid6 = cdnAsset('/uploads/videos/69b7dd4a45a26.mp4');
 
 // Keep some originals for CTA/Hero transitions if needed
-const vid13 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dd7a2970e.mp4';
-const vid14 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7dd9a11eea.mp4';
-const vid17 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7ddb37e84b.mp4';
-const vid16 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7ddc58e8f9.mp4';
+const vid13 = cdnAsset('/uploads/videos/69b7dd7a2970e.mp4');
+const vid14 = cdnAsset('/uploads/videos/69b7dd9a11eea.mp4');
+const vid17 = cdnAsset('/uploads/videos/69b7ddb37e84b.mp4');
+const vid16 = cdnAsset('/uploads/videos/69b7ddc58e8f9.mp4');
 
-const aboutVid = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7de058c601.mp4';
-const projectVid1 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7de661e5fd.mp4';
-const projectVid2 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7de8294e1b.mp4';
-const projectVid3 = 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/videos/69b7de9b750be.mp4';
+const aboutVid = cdnAsset('/uploads/videos/69b7de058c601.mp4');
+const projectVid1 = cdnAsset('/uploads/videos/69b7de661e5fd.mp4');
+const projectVid2 = cdnAsset('/uploads/videos/69b7de8294e1b.mp4');
+const projectVid3 = cdnAsset('/uploads/videos/69b7de9b750be.mp4');
 
 export const aboutAssets = {
   aboutCompanyVid: aboutVid
@@ -635,37 +638,37 @@ export const industrialApplicationsImages = [
   {
     id: 1,
     title: 'Pellet Burner with Bakery Oven',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.01.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.01.jpeg'),
     desc: 'High-performance pellet burner optimized for continuous bakery oven operations, ensuring precise temperature control and fuel savings.'
   },
   {
     id: 2,
     title: 'Pellet Burner with Sand Dryer',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.02.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.02.jpeg'),
     desc: 'Heavy-duty pellet burner integrated with sand drying systems, delivering robust and consistent heat for industrial material processing.'
   },
   {
     id: 3,
     title: 'Pellet Burner with Heat Exchanger',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.03.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.03.jpeg'),
     desc: 'Efficient combination of pellet burner and heat exchanger designed for maximum thermal transfer and minimal energy loss.'
   },
   {
     id: 4,
     title: 'Pellet Burner with Steam Boiler',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.04.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.04.jpeg'),
     desc: 'Reliable pellet burner configured for steam boiler operation, providing steady steam generation with significantly reduced fuel costs.'
   },
   {
     id: 5,
     title: 'Pellet Burner with Roaster',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.05.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.05.jpeg'),
     desc: 'Precision heating solution for industrial roasters, ensuring uniform heat distribution for optimal product quality.'
   },
   {
     id: 6,
     title: 'Pellet Burner in Shutter Kiln',
-    image: 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.07.jpeg',
+    image: cdnAsset('/uploads/images/WhatsApp%20Image%202026-03-26%20at%2011.00.07.jpeg'),
     desc: 'Powerful pellet burner implementation in shutter kilns, engineered for high-temperature demands and long continuous operational cycles.'
   }
 ];
