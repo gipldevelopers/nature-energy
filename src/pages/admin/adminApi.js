@@ -1,5 +1,5 @@
 // Admin Panel API helper
-const API_BASE = 'http://localhost/nature-energy/backend/';
+const API_BASE = (import.meta.env.VITE_ADMIN_API_BASE || '').replace(/\/?$/, '/');
 
 export const getToken = () => localStorage.getItem('ne_admin_token');
 export const getUsername = () => localStorage.getItem('ne_admin_user');

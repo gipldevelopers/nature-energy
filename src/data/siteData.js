@@ -1,5 +1,5 @@
 // ── Core product / hero images (your original high-quality PNGs) ──
-const CDN_BASE_URL = (import.meta.env.VITE_CDN_BASE_URL || 'http://localhost/nature-energy/nature-energy-cdn-and-backend/cdn-files').replace(/\/$/, '');
+const CDN_BASE_URL = (import.meta.env.VITE_CDN_BASE_URL || '').replace(/\/$/, '');
 const cdnAsset = (path) => `${CDN_BASE_URL}${path}`;
 
 const heroBg = cdnAsset('/uploads/images/69b7e1fe308c4.png');

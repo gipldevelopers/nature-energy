@@ -21,7 +21,8 @@ export function LeadFormMap() {
         setErrorMsg('');
 
         try {
-            const response = await fetch('http://localhost/nature-energy/backend/contact.php', {
+            const API_BASE = (import.meta.env.VITE_ADMIN_API_BASE || '').replace(/\/?$/, '/');
+            const response = await fetch(API_BASE + 'contact.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
