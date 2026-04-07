@@ -3,9 +3,9 @@ const CDN_BASE_URL = (import.meta.env.VITE_CDN_BASE_URL || '').replace(/\/$/, ''
 const cdnAsset = (path) => `${CDN_BASE_URL}${path}`;
 
 const heroBg = cdnAsset('/uploads/images/69b7e1fe308c4.png');
-const burnerMain = cdnAsset('/uploads/images/69b7e24ab8e2c.jpg');
+const burnerMain = cdnAsset('//uploads/images/WhatsApp Image 2026-03-26 at 11.00.03.jpeg');
 const boilerRoom = cdnAsset('/uploads/images/69b7e268c74d9.png');
-const machine1 = cdnAsset('/uploads/images/69b7e27f97b2a.jpg');
+const machine1 = cdnAsset('/uploads/images/69d4daf197e5c.jpeg');
 const pellets = cdnAsset('/uploads/images/69b7e2978fb74.png');
 const ctaConsultation = cdnAsset('/uploads/images/69b7e2c3e2211.png');
 
@@ -13,9 +13,9 @@ const ctaConsultation = cdnAsset('/uploads/images/69b7e2c3e2211.png');
 
 // ── Updated Images/Videos from New Folder ──
 const updatedImg1 = cdnAsset('/uploads/images/69b7e0966f607.jpeg');
-const burnerWorkshopClean = cdnAsset('/uploads/images/69b7e0e9b4d46.png');
-const burnerBoilerClean = cdnAsset('/uploads/images/69b7e128e69dd.png');
-const burnerFactoryClean = cdnAsset('/uploads/images/69b7e18dadb22.png');
+const burnerWorkshopClean = cdnAsset('/uploads/images/WhatsApp Image 2026-03-26 at 11.00.05.jpeg');
+const burnerBoilerClean = cdnAsset('/uploads/images/WhatsApp Image 2026-03-26 at 11.00.07.jpeg');
+const burnerFactoryClean = cdnAsset('/uploads/images/WhatsApp Image 2026-03-26 at 11.00.04.jpeg');
 const burnerControlClean = cdnAsset('/uploads/images/69b7e1b3eae09.png');
 
 const vid3 = cdnAsset('/uploads/videos/69b7da2725306.mp4');
