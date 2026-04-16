@@ -66,15 +66,6 @@ export function Footer() {
                             </Link>
                         ))}
                     </div>
-
-                    <h4 className="mt-6 text-lg font-semibold text-[#354653]">Sister Concerns</h4>
-                    <div className="mt-2 flex gap-4 text-sm text-[#5B707E]">
-                        {contactInfo.referenceWebsites.map((site) => (
-                            <span key={site.name} className="inline-flex items-center gap-1 font-medium text-[#078DA4]">
-                                {site.name}
-                            </span>
-                        ))}
-                    </div>
                 </div>
 
                 <div className={`${cardBase} p-5`}>
